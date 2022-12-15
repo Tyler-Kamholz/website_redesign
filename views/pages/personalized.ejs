@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/personalized.css" rel="stylesheet">
+    <title>User</title>
+</head>
+
+<header>
+    <div class="nav_bar">
+
+        <a href="home"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li><a href="standings">Standings</a></li>
+                    <li><a href="races">Next Race</a></li>
+                    <li><a href="teams">Teams</a></li>
+                    <li><a href="history">History</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<body>
+    <div class="user_info">
+
+        <div></div>
+        <div class="info">
+            <div class="name">
+                <h1>Welcome Back <%= user_results[0].name %></h1>
+            </div>
+            <div class="team_info">
+                <div class="favorite_team">
+                    <div class="text">
+                        <h1>Favorite Team:</h1>
+                        <h2><%= user_results[0].favorite_team %></h2>
+                    </div>
+                    <img src="<% for(var i=0; i < teams.length; i++) { %>
+
+                        <% if(user_results[0].favorite_team === teams[i].team) { %>
+
+                            <%= teams[i].car_image %>
+                            
+                        <% } %>
+                        
+                        <% } %>
+                            " 
+                    alt="favorite team's car">
+                </div>
+                <div class="favorite_driver">
+                    <div class="text2">
+                        <h1>Favorite Driver:</h1>
+                        <h2><%= user_results[0].favorite_driver %></h2>
+                    </div>
+                    <img src="<% for(var i = 0; i < teams.length; i++) { %>
+
+                        <% if(user_results[0].favorite_driver === (teams[i].driver_one_firstname + " " + teams[i].driver_one_lastname)) { %>
+
+                            <%= teams[i].driver_one_image %>
+
+                        <% } %>
+
+                        <% if(user_results[0].favorite_driver === (teams[i].driver_two_firstname + " " + teams[i].driver_two_lastname)) { %>
+
+                            <%= teams[i].driver_two_image %>
+
+                        <% } %>
+
+                    <% } %>"
+      
+                    alt="favorite driver image">
+                </div>
+            </div>
+            <div class="favorite_track">
+                <div class="text3">
+                    <h1>Favorite Track:</h1>
+                    <h2><%= user_results[0].favorite_track %></h2>
+                </div>
+                <img src="<% for(var i=0; i < race.length; i++) { %>
+
+                    <% if(user_results[0].favorite_track === race[i].race_name) { %>
+
+                        <%= race[i].track_image %>
+                        
+                    <% } %>
+                    
+                    <% } %>" alt="favorite track">
+            </div>
+            <div class="edit"><a href="edit_profile">Edit Profile</a></div>
+
+
+            <% if(session.admin) { %>
+
+                <div class="edit_info"><a
+
+                    <%=  'href=edit_info' %>
+                    >
+                    <%= "Edit F1 Website" %>
+
+                </a></div>
+
+            <% } %>
+                    
+                
+
+            <div class="logout"><a href="logout">Logout</a></div>
+
+        </div>
+        <div></div>
+
+    </div>
+</body>
+
+</html>

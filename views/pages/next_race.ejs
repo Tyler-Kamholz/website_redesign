@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/next_race.css" rel="stylesheet">
+    <title>Coming Up</title>
+
+</head>
+
+<body>
+    
+    <header>
+
+        <div class="nav_bar">
+
+            <a href="home"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+            <nav>
+                <ul>
+                    <li><a href="standings">Standings</a></li>
+                    <li><a href="races">Next Race</a></li>
+                    <li><a href="teams">Teams</a></li>
+                    <li><a href="history">History</a></li>
+                    <% if(session.loggedIn) { %>
+
+                        <li><a
+
+                            <%=  'href=user' %>
+                            >
+                            <%= "Profile" %>
+
+                        </a></li>
+                            
+                        <% } else { %>
+
+                            <li><a
+
+                                <%=  'href=login' %>
+                                >
+                                <%= "Login" %>
+    
+                            </a></li>
+
+                        <% } %>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <div class="race_schedule">
+
+        <% for(var i = 0; i < data.length; i++) { %>
+
+            <div class="race">
+                <div class="race_dates">
+                    <div class="month"> 
+                        
+                    <% if(data[i].race_month_start != data[i].race_month_end) { %>
+    
+                        <%= data[i].race_month_start + " - " %>
+    
+                    <% } %>
+    
+                    <%= data[i].race_month_end %>
+    
+                    </div>
+                    <div class="date"> <%= data[i].race_date_start %>-<%= data[i].race_date_end %> </div>
+                </div>
+                <img class="race_image" src="../assets/next race/dummy image.jpeg">
+                <div class="location"> <%= data[i].race_name %> </div>
+            </div>
+
+        <% } %>
+
+
+    </div>
+
+
+    <footer>
+        <p>Website redesign by Tyler Kamholz for Web Dev Class</p>
+    </footer>
+
+</body>
+
+</html>

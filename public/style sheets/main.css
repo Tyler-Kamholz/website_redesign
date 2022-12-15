@@ -1,0 +1,1961 @@
+@font-face {
+    font-family: 'formulaOneRegular';
+    src: url(../fonts/Formula1-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneBold';
+    src: url(../fonts/Formula1-Bold.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneItalic';
+    src: url(../fonts/Formula1-Italic.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneWide';
+    src: url(../fonts/Formula1-Wide.woff2);
+}
+
+/*Desktop View*/
+@media screen and (min-aspect-ratio: 16/10) and (max-aspect-ratio: 21/9) and (min-height: 375px){
+    html {
+        background-color: red;
+    }
+    
+    body {
+        background-blend-mode: linear-gradient(red, black);
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    
+    /***************************************************
+    this is the header css
+    ***************************************************/
+    
+    header {
+        background: red;
+        height: 10vh;
+    }
+    
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    
+    .nav_bar {
+        margin: 0 auto;
+        width: 100vw;
+        height: 10vh;
+    }
+    
+    .logo {
+        position: relative;
+        top: 3vh;
+        left: -6vw;
+        width: 10vw;
+        padding-left: 10vw;
+    
+        transition: all ease-in-out 250ms;
+    }
+    
+    .logo:hover {
+        filter: invert(100%);
+    }
+    
+    nav {
+        float: right;
+        padding-right: 5vw;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav li {
+        display: inline-block;
+        margin-left: 2vw;
+        padding-top: 8vh;
+        padding-bottom: 3vh;
+    
+        position: relative;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: .8vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+    
+    nav a:hover {
+        color: black;
+    }
+    
+    nav a::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+    
+        position: absolute;
+        top: 7vh;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+    
+    nav a:hover::before {
+        width: 100%;
+    }
+    
+    /***************************************************
+    this is the header footer
+    ***************************************************/
+    
+    footer {
+        background-color: red;
+        font-family: 'formulaOneRegular';
+        font-size: 1vw;
+        width: 100vw;
+        height: 10vh;
+        color: white;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /***************************************************
+    this is the image block
+    ***************************************************/
+    
+    .next_race_images {
+        display: block;
+        background-color: red;
+        height: 80vh;
+    }
+    
+    /*Image window size*/
+    .slider {
+        margin-left: 2vw;
+        width: 96vw;
+        height: 70vh;
+        border-radius: 1vw;
+        overflow: hidden;
+    }
+    
+    /*images in a line so we can move over*/
+    .images {
+        width: 500%;
+        height: 10vh;
+        display: flex;
+    }
+    
+    .images input {
+        display: none;
+    }
+    
+    .image {
+        width: 20%;
+        transition: 2s;
+    }
+    
+    .image img {
+        object-fit: cover;
+        width: 100vw;
+        height: 80vh;
+    }
+    
+    /*buttons*/
+    .manual_nav {
+        position: absolute;
+        width: 100vw;
+        margin-top: 65vh;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual_button {
+        border: 3px solid red;
+        padding: .5vw;
+        border-radius: 1vw;
+        cursor: pointer;
+        transition: .25s;
+    }
+    
+    .manual_button:not(:last-child) {
+        margin-right: 3vw;
+    }
+    
+    .manual_button:hover {
+        background-color: red;
+    }
+    
+    /*Moving the images over*/
+    #image1:checked~.first {
+        margin-left: 0;
+    }
+    
+    #image2:checked~.first {
+        margin-left: -20%;
+    }
+    
+    #image3:checked~.first {
+        margin-left: -40%;
+    }
+    
+    #image4:checked~.first {
+        margin-left: -60%;
+    }
+    
+    /*Automation*/
+    /*buttons*/
+    .auto_nav {
+        position: absolute;
+        display: flex;
+        width: 100vw;
+        margin-top: 65vh;
+        justify-content: center;
+    }
+    
+    .auto_nav div {
+        border: 3px solid red;
+        padding: .5vw;
+        border-radius: 10px;
+        transition: .25s;
+    }
+    
+    .auto_nav div:not(:last-child) {
+        margin-right: 3vw;
+    }
+    
+    #image1:checked~.auto_nav .auto_btn1 {
+        background-color: red;
+    }
+    
+    #image2:checked~.auto_nav .auto_btn2 {
+        background-color: red;
+    }
+    
+    #image3:checked~.auto_nav .auto_btn3 {
+        background-color: red;
+    }
+    
+    #image4:checked~.auto_nav .auto_btn4 {
+        background-color: red;
+    }
+    
+    
+    /***************************************************
+    this is the poll positions block
+    ***************************************************/
+    
+    .poll_positions {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgb(77, 77, 77) 0%, rgba(255, 0, 0, 1) 100%);
+    
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .poll_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        position: relative;
+    
+    }
+    
+    .podeum {
+        display: flex;
+    
+        padding-bottom: 10vw;
+    }
+    
+    .links {
+        color: red;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: .8vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+
+        position: absolute;
+        top: 82vh;
+    }
+    
+    .links:hover {
+        color: white;
+    }
+    
+    .links::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: white;
+    
+        position: absolute;
+        top: 3vh;
+        left: -13vw;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+    
+    .links:hover::before {
+
+        width: 30vw;
+    }
+    
+    /*
+        First Driver
+    */
+    #first {
+        height: 60vh;
+        width: 20vw;
+        background-color: red;
+        border-radius: 15px;
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.758);
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #first_face {
+        width: 15vw;
+        height: 25vh;
+        border: 2px solid black;
+        border-radius: 2vw;
+        margin-top: -5vh;
+        margin-bottom: -10vh;
+    }
+    
+    #first_number {
+        color: white;
+        font-family: 'formulaOneWide';
+        font-size: 1.5vw;
+    
+        position: relative;
+        top: -16vh;
+        left: 7vw; /*6 if it is 2 digets*/
+    }
+    
+    #first_name {
+        color: white;
+        font-family: 'formulaOneRegular';
+        font-size: 3vh;
+        padding: 0;
+    
+        position: relative;
+        top: 2vw;
+    }
+    
+    #first_points {
+        color: black;
+        font-family: 'formulaOneWide';
+    
+        width: 18vw;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+    
+        position: relative;
+        top: 4vh;
+    }
+    
+    /*
+        Second Driver
+    */
+    #second {
+        margin-top: 10vh;
+        height: 50vh;
+        width: 20vw;
+        background-color: rgb(1, 147, 132);
+        border-radius: 15px;
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.758);
+    
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #second_face {
+        width: 15vw;
+        height: 25vh;
+        border: 2px solid black;
+        border-radius: 2vw;
+        margin-top: -5vh;
+        margin-bottom: -20vh;
+    }
+    
+    #second_number {
+        color: white;
+        font-family: 'formulaOneWide';
+        font-size: 1.5vw;
+    
+        position: relative;
+        top: -6vh;
+        left: 7vw; /*6vw if it is 2 digets*/
+    }
+    
+    #second_name {
+        color: white;
+        font-family: 'formulaOneRegular';
+        font-size: 3vh;
+        padding: 0;
+    
+        position: relative;
+        top: 4vw;
+    }
+    
+    #second_points {
+        color: black;
+        font-family: 'formulaOneWide';
+    
+        width: 18vw;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+    
+        position: relative;
+        top: 4vh;
+    }
+    
+    /*
+        Third Driver
+    */
+    #third {
+        margin-top: 10vh;
+        height: 50vh;
+        width: 20vw;
+        background-color: rgb(202, 202, 0);
+        border-radius: 15px;
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.758);
+    
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #third_face {
+        width: 15vw;
+        height: 25vh;
+        border: 2px solid black;
+        border-radius: 2vw;
+        margin-top: -5vh;
+        margin-bottom: -20vh;
+    }
+    
+    #third_number {
+        color: white;
+        font-family: 'formulaOneWide';
+        font-size: 1.5vw;
+    
+        position: relative;
+        top: -6vh;
+        left: 6vw; /*7 if it is 1 diget*/
+    }
+    
+    #third_name {
+        color: white;
+        font-family: 'formulaOneRegular';
+        font-size: 3vh;
+        padding: 0;
+    
+        position: relative;
+        top: 4vw;
+    }
+    
+    #third_points {
+        color: black;
+        font-family: 'formulaOneWide';
+    
+        width: 18vw;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+    
+        position: relative;
+        top: 4vh;
+    }
+    
+    .drivers_face {
+        max-width: 25vh;
+        position: relative;
+        
+        z-index: 2;
+    }
+    
+    /***************************************************
+    this is the next race weather block
+    ***************************************************/
+    
+    .next_race_weather {
+        background-color: rgb(77, 77, 77);
+        font-family: 'Roboto', sans-serif;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        width: 100vw;
+
+
+    }
+    
+    .three_day_weather {
+
+        position: relative;
+        top: -10vh;
+
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
+        height: 50vh;
+    }
+    
+    .weather_location {
+        margin: 0;
+
+        position: relative;
+        top: -10vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 5vh;
+        padding-top: 0vh;
+        padding-bottom: 10vh;
+
+        font-size: 5vw;
+        font-family: "formulaOneItalic";
+        color: white;
+    }
+    
+    .day_one {
+        width: 31vw;
+        height: 50vh;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, rgba(253, 255, 230, 1) 0%, rgba(136, 226, 224, 1) 65%);
+        border: 1vh solid white;
+        border-radius: 1vw;
+        box-shadow: 0px 31px 35px -26px #080c21;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .day_two {
+        width: 31vw;
+        height: 50vh;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, rgba(253, 255, 230, 1) 0%, rgba(148, 223, 221, 1) 0%, rgba(69, 69, 69, 1) 97%);
+        border: 1vh solid white;
+        border-radius: 1vw;
+        box-shadow: 0px 31px 35px -26px #080c21;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .day_three {
+        width: 31vw;
+        height: 50vh;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, rgba(253, 255, 230, 1) 0%, rgba(199, 199, 199, 1) 0%, rgba(69, 69, 69, 1) 97%);
+        border: 1vh solid white;
+        border-radius: 1vw;
+        box-shadow: 0px 31px 35px -26px #080c21;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .weather_image {
+        width: 8vw;
+        height: auto;
+    }
+    
+    .day {
+        font-family: 'formulaOneBold';
+        font-size: 2vw;
+    }
+    
+    .weather {
+        font-family: 'formulaOneWide';
+        font-size: 1vw;
+    }
+
+
+    
+    /***************************************************
+    this is the calendar block
+    ***************************************************/
+    
+    .calendar {
+        display: block;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(77, 77, 77, 1) 100%);
+        height: 160vh;
+
+       
+        
+    }
+    
+    .race_cards {
+        position: relative;
+        top: 55vh;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        background-color: rgb(203, 34, 34);
+    }
+    
+    .upcoming_race {
+        width: 33vw;
+        height: 60vh;
+        background-color: rgb(234, 25, 25);
+        border-radius: 2vw;
+        box-shadow: 0px 31px 3.5vw -1vw #080c21;
+        z-index: 1;
+        position: relative;
+        top: -2vh;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .not_the_race {
+        width: 33vw;
+        height: 60vh;
+        background-color: rgb(203, 34, 34);
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        filter: blur(.1vw);
+    }
+    
+    .track_image {
+        max-height: 20vh;
+    }
+    
+    .race_holder {
+        display: grid;
+        grid-template-columns: 10vw 10vw 5vw;
+    
+    }
+
+    .link_to_races {
+        position: relative;
+        top: 70vh;
+        display: flex;
+        justify-content: center;
+
+        color: red;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: .8vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+
+    .link_to_races:hover {
+        color: black;
+    }
+    
+    .link_to_races::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+    
+        position: absolute;
+        top: 3vh;
+        left: 35vw;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+    
+    .link_to_races:hover::before {
+        width: 30vw;
+        position: absolute;
+        left: 35vw;
+    }
+}
+
+/*Phone View*/
+@media screen and (max-aspect-ratio: 3/4) {
+    
+    html {
+        background-color: red;
+    }
+    
+    body {
+        background-blend-mode: linear-gradient(red, black);
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    
+    /***************************************************
+    this is the header css
+    ***************************************************/
+    
+    header {
+        background: red;
+        height: 10vh;
+    }
+    
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    
+    .nav_bar {
+        margin: 0 auto;
+        width: 100vw;
+        height: 10vh;
+    }
+    
+    .logo {
+        position: relative;
+        top: 3vh;
+        left: -6vw;
+        width: 20vw;
+        padding-left: 10vw;
+    
+        transition: all ease-in-out 250ms;
+    }
+    
+    .logo:hover {
+        filter: invert(100%);
+    }
+    
+    nav {
+        float: right;
+        padding-right: 5vw;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav li {
+        display: inline-block;
+        margin-left: 2vw;
+        padding-top: 6vh;
+        padding-bottom: 3vh;
+    
+        position: relative;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1vh;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+    
+    nav a:hover {
+        color: black;
+    }
+    
+    nav a::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+    
+        position: absolute;
+        top: 5vh;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+    
+    nav a:hover::before {
+        width: 100%;
+    }
+    
+    /***************************************************
+    this is the header footer
+    ***************************************************/
+    
+    footer {
+        background-color: red;
+        font-family: 'formulaOneRegular';
+        font-size: 1vw;
+        width: 100vw;
+        height: 10vh;
+        color: white;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /***************************************************
+    this is the image block
+    ***************************************************/
+    
+    .next_race_images {
+        display: block;
+        background-color: red;
+        height: 40vh;
+    }
+    
+    /*Image window size*/
+    .slider {
+        margin-left: 2vw;
+        width: 96vw;
+        height: 40vh;
+        border-radius: 1vw;
+        overflow: hidden;
+    }
+    
+    /*images in a line so we can move over*/
+    .images {
+        width: 500%;
+        height: 10vh;
+        display: flex;
+    }
+    
+    .images input {
+        display: none;
+    }
+    
+    .image {
+        width: 20%;
+        transition: 2s;
+    }
+    
+    .image img {
+        object-position: 0vw -30vh;
+        object-fit: cover;
+        width: 100vw;
+        height: 80vh;
+    }
+    
+    /*buttons*/
+    .manual_nav {
+        position: absolute;
+        width: 100vw;
+        margin-top: 35vh;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual_button {
+        border: 3px solid red;
+        padding: .5vw;
+        border-radius: 1vw;
+        cursor: pointer;
+        transition: .25s;
+    }
+    
+    .manual_button:not(:last-child) {
+        margin-right: 3vw;
+    }
+    
+    .manual_button:hover {
+        background-color: red;
+    }
+    
+    /*Moving the images over*/
+    #image1:checked~.first {
+        margin-left: 0;
+    }
+    
+    #image2:checked~.first {
+        margin-left: -20%;
+    }
+    
+    #image3:checked~.first {
+        margin-left: -40%;
+    }
+    
+    #image4:checked~.first {
+        margin-left: -60%;
+    }
+    
+    /*Automation*/
+    /*buttons*/
+    .auto_nav {
+        position: absolute;
+        display: flex;
+        width: 100vw;
+        margin-top: 35vh;
+        justify-content: center;
+    }
+    
+    .auto_nav div {
+        border: 3px solid red;
+        padding: .5vw;
+        border-radius: 10px;
+        transition: .25s;
+    }
+    
+    .auto_nav div:not(:last-child) {
+        margin-right: 3vw;
+    }
+    
+    #image1:checked~.auto_nav .auto_btn1 {
+        background-color: red;
+    }
+    
+    #image2:checked~.auto_nav .auto_btn2 {
+        background-color: red;
+    }
+    
+    #image3:checked~.auto_nav .auto_btn3 {
+        background-color: red;
+    }
+    
+    #image4:checked~.auto_nav .auto_btn4 {
+        background-color: red;
+    }
+    
+    
+    /***************************************************
+    this is the poll positions block
+    ***************************************************/
+    
+    .poll_positions {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgb(77, 77, 77) 0%, rgba(255, 0, 0, 1) 100%);
+    
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .poll_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        position: relative;
+    }
+    
+    .podeum {
+        display: flex;
+    
+        padding-bottom: 10vw;
+    }
+    
+    .links {
+        color: red;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+
+        position: absolute;
+        top: 58vh;
+    }
+    
+    .links:hover {
+        color: white;
+    }
+    
+    .links::before {
+        content: '';
+        display: block;
+        height: .3vw;
+        background-color: white;
+    
+        position: absolute;
+        top: 2vh;
+        left: -13vw;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+    
+    .links:hover::before {
+
+        width: 30vw;
+    }
+    
+    /*
+        First Driver
+    */
+    #first {
+        height: 30vh;
+        width: 20vw;
+        background-color: red;
+        border-radius: 15px;
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.758);
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    
+    #first_number {
+        color: white;
+        font-family: 'formulaOneWide';
+        font-size: 1.5vw;
+    
+        position: relative;
+        top: -6vh;
+        left: 7vw; /*6 if it is 2 digets*/
+    }
+    
+    #first_name {
+        color: white;
+        font-family: 'formulaOneRegular';
+        font-size: 1.5vw;
+        padding: 0;
+    
+        position: relative;
+        top: 0vw;
+    }
+    
+    #first_points {
+        color: black;
+        font-family: 'formulaOneWide';
+        font-size: 1.75vw;
+
+        width: 2vw;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+    }
+    
+    /*
+        Second Driver
+    */
+    #second {
+        margin-top: 7vh;
+        height: 23vh;
+        width: 20vw;
+        background-color: rgb(1, 147, 132);
+        border-radius: 15px;
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.758);
+    
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    
+    #second_number {
+        color: white;
+        font-family: 'formulaOneWide';
+        font-size: 1.5vw;
+    
+        position: relative;
+        top: -6vh;
+        left: 7vw; /*6vw if it is 2 digets*/
+    }
+    
+    #second_name {
+        color: white;
+        font-family: 'formulaOneRegular';
+        font-size: 1.5vw;
+        padding: 0;
+    }
+    
+    #second_points {
+        color: black;
+        font-family: 'formulaOneWide';
+        font-size: 1.75vw;
+    
+        width: 18vw;
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+    }
+    
+    /*
+        Third Driver
+    */
+    #third {
+        margin-top: 7vh;
+        height: 23vh;
+        width: 20vw;
+        background-color: rgb(202, 202, 0);
+        border-radius: 15px;
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.758);
+    
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    
+    #third_number {
+        color: white;
+        font-family: 'formulaOneWide';
+        font-size: 1.5vw;
+    
+        position: relative;
+        top: -6vh;
+        left: 6vw; /*6vw if it is 2 digets*/
+    }
+    
+    #third_name {
+        color: white;
+        font-family: 'formulaOneRegular';
+        font-size: 1.5vw;
+        padding: 0;
+    }
+    
+    #third_points {
+        color: black;
+        font-family: 'formulaOneWide';
+        font-size: 1.75vw;
+    
+        width: 18vw;
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .drivers_face {
+        max-width: 15vw;
+        position: relative;
+        top: 5vw;
+        left: -.5vw;
+        
+        z-index: 2;
+    }
+    
+    /***************************************************
+    this is the next race weather block
+    ***************************************************/
+    
+    .next_race_weather {
+        background-color: rgb(77, 77, 77);
+        font-family: 'Roboto', sans-serif;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+        width: 100vw;
+
+    }
+    
+    .three_day_weather {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
+        height: 50vh;
+    }
+    
+    .weather_location {
+        
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 5vh;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+
+        font-size: 5vw;
+        font-family: "formulaOneItalic";
+        color: white;
+    }
+    
+    .day_one {
+        width: 25vw;
+        height: 20vh;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, rgba(253, 255, 230, 1) 0%, rgba(136, 226, 224, 1) 65%);
+        border: 1vh solid white;
+        border-radius: 1vw;
+        box-shadow: 0px 31px 35px -26px #080c21;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .day_two {
+        width: 25vw;
+        height: 20vh;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, rgba(253, 255, 230, 1) 0%, rgba(148, 223, 221, 1) 0%, rgba(69, 69, 69, 1) 97%);
+        border: 1vh solid white;
+        border-radius: 1vw;
+        box-shadow: 0px 31px 35px -26px #080c21;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .day_three {
+        width: 25vw;
+        height: 20vh;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, rgba(253, 255, 230, 1) 0%, rgba(199, 199, 199, 1) 0%, rgba(69, 69, 69, 1) 97%);
+        border: 1vh solid white;
+        border-radius: 1vw;
+        box-shadow: 0px 31px 35px -26px #080c21;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .weather_image {
+        width: 8vw;
+        height: auto;
+    }
+    
+    .day {
+        font-family: 'formulaOneBold';
+        font-size: 2vw;
+    }
+    
+    .weather {
+        font-family: 'formulaOneWide';
+        font-size: 1vw;
+    }
+
+
+    
+    /***************************************************
+    this is the calendar block
+    ***************************************************/
+    
+    .calendar {
+        display: block;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(77, 77, 77, 1) 100%);
+        height: 80vh;
+    }
+    
+    .race_cards {
+        position: relative;
+        top: 25vh;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        background-color: rgb(203, 34, 34);
+
+        height: 30vh;
+    }
+    
+    .upcoming_race {
+        width: 33vw;
+        height: 30vh;
+        background-color: rgb(234, 25, 25);
+        border-radius: 2vw;
+        box-shadow: 0px 31px 3.5vw -1vw #080c21;
+        z-index: 1;
+        position: relative;
+        top: -2vh;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .not_the_race {
+        width: 33vw;
+        height: 30vh;
+        background-color: rgb(203, 34, 34);
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        filter: blur(.1vw);
+    }
+    
+    .track_image {
+        max-height: 10vw;
+    }
+    
+    .race_holder {
+        display: grid;
+        grid-template-columns: 10vw 10vw 5vw;
+    
+    }
+
+    .link_to_races {
+        position: relative;
+        top: 30vh;
+        display: flex;
+        justify-content: center;
+
+        color: red;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+
+    .link_to_races:hover {
+        color: black;
+    }
+    
+    .link_to_races::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+    
+        position: absolute;
+        top: 2vh;
+        left: 35vw;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+    
+    .link_to_races:hover::before {
+        width: 30vw;
+        position: absolute;
+        left: 35vw;
+    }
+
+}
+
+/*Tablet View*/
+@media screen and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 16/10) {
+    
+    html {
+        background-color: red;
+    }
+
+    body {
+        background-blend-mode: linear-gradient(red, black);
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /***************************************************
+this is the header css
+***************************************************/
+
+    header {
+        background: red;
+        height: 10vh;
+    }
+
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .nav_bar {
+        margin: 0 auto;
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .logo {
+        position: relative;
+        top: 3vh;
+        left: -6vw;
+        width: 15vh;
+        padding-left: 10vw;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    .logo:hover {
+        filter: invert(100%);
+    }
+
+    nav {
+        float: right;
+        padding-right: 5vw;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 2vw;
+        padding-top: 8vh;
+        padding-bottom: 3vh;
+
+        position: relative;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.25vh;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+
+        position: absolute;
+        top: 7vh;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        width: 100%;
+    }
+    
+    /***************************************************
+    this is the header footer
+    ***************************************************/
+    
+    footer {
+        background-color: red;
+        font-family: 'formulaOneRegular';
+        font-size: 1vw;
+        width: 100vw;
+        height: 10vh;
+        color: white;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /***************************************************
+    this is the image block
+    ***************************************************/
+    
+    .next_race_images {
+        display: block;
+        background-color: red;
+        height: 80vw;
+    }
+    
+    /*Image window size*/
+    .slider {
+        margin-left: 2vw;
+        width: 96vw;
+        height: 60vw;
+        max-height: 500px;
+        border-radius: 1vw;
+        overflow: hidden;
+
+        position: relative;
+        top: 10vh;
+    }
+    
+    /*images in a line so we can move over*/
+    .images {
+        width: 500%;
+        height: 10vh;
+        display: flex;
+    }
+    
+    .images input {
+        display: none;
+    }
+    
+    .image {
+        width: 20%;
+        transition: 2s;
+    }
+    
+    .image img {
+        object-fit: cover;
+        width: 100vw;
+        height: 80vh;
+    }
+    
+    /*Moving the images over*/
+    #image1:checked~.first {
+        margin-left: 0;
+    }
+    
+    #image2:checked~.first {
+        margin-left: -20%;
+    }
+    
+    #image3:checked~.first {
+        margin-left: -40%;
+    }
+    
+    #image4:checked~.first {
+        margin-left: -60%;
+    }
+     
+    
+    
+    /***************************************************
+    this is the poll positions block
+    ***************************************************/
+    
+    .poll_positions {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgb(77, 77, 77) 0%, rgba(255, 0, 0, 1) 100%);
+    
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        margin-top: -10vw;
+    }
+    
+    .poll_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        position: relative;
+    }
+    
+    .podeum {
+        display: flex;
+    
+        padding-bottom: 10vw;
+    }
+    
+    .links {
+        color: red;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+
+        position: absolute;
+        top: 58vh;
+    }
+    
+    .links:hover {
+        color: white;
+    }
+    
+    .links::before {
+        content: '';
+        display: block;
+        height: .3vw;
+        background-color: white;
+    
+        position: absolute;
+        top: 3vh;
+        left: -13vw;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+    
+    .links:hover::before {
+
+        width: 30vw;
+    }
+    
+    /*
+        First Driver
+    */
+    #first {
+        height: 30vw;
+        width: 20vw;
+        background-color: red;
+        border-radius: 15px;
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.758);
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    
+    #first_number {
+        color: white;
+        font-family: 'formulaOneWide';
+        font-size: 1.5vw;
+    
+        position: relative;
+        top: -10vh;
+        left: 7vw; /*6 if it is 2 digets*/
+    }
+    
+    #first_name {
+        color: white;
+        font-family: 'formulaOneRegular';
+        font-size: 1.5vw;
+        padding: 0;
+    
+        position: relative;
+        top: 0vw;
+        margin-top: -.5vw;
+    }
+    
+    #first_points {
+        color: black;
+        font-family: 'formulaOneWide';
+        font-size: 1.75vw;
+
+        width: 2vw;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+    }
+    
+    /*
+        Second Driver
+    */
+    #second {
+        margin-top: 7vw;
+        height: 23vw;
+        width: 20vw;
+        background-color: rgb(1, 147, 132);
+        border-radius: 15px;
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.758);
+    
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    
+    #second_number {
+        color: white;
+        font-family: 'formulaOneWide';
+        font-size: 1.5vw;
+    
+        position: relative;
+        top: -10vh;
+        left: 7vw; /*6vw if it is 2 digets*/
+    }
+    
+    #second_name {
+        color: white;
+        font-family: 'formulaOneRegular';
+        font-size: 1.5vw;
+        padding: 0;
+
+        margin-top: -1vw;
+    }
+    
+    #second_points {
+        color: black;
+        font-family: 'formulaOneWide';
+        font-size: 1vw;
+    
+        width: 18vw;
+        display: flex;
+        justify-content: center;
+        margin-top: -1vw;
+    }
+    
+    /*
+        Third Driver
+    */
+    #third {
+        margin-top: 7vw;
+        height: 23vw;
+        width: 20vw;
+        background-color: rgb(202, 202, 0);
+        border-radius: 15px;
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.758);
+    
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    
+    #third_number {
+        color: white;
+        font-family: 'formulaOneWide';
+        font-size: 1.5vw;
+    
+        position: relative;
+        top: -10vh;
+        left: 6vw; /*6vw if it is 2 digets*/
+    }
+    
+    #third_name {
+        color: white;
+        font-family: 'formulaOneRegular';
+        font-size: 1.5vw;
+        padding: 0;
+
+        margin-top: -1vw;
+    }
+    
+    #third_points {
+        color: black;
+        font-family: 'formulaOneWide';
+        font-size: 1vw;
+    
+        width: 18vw;
+        display: flex;
+        justify-content: center;
+        margin-top: -1vw;
+    }
+    
+    .drivers_face {
+        max-width: 15vw;
+        position: relative;
+        top: 2vw;
+        left: -.5vw;
+        
+        z-index: 2;
+    }
+    
+    /***************************************************
+    this is the next race weather block
+    ***************************************************/
+    
+    .next_race_weather {
+        background-color: rgb(77, 77, 77);
+        font-family: 'Roboto', sans-serif;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        width: 100vw;
+
+    }
+    
+    .three_day_weather {
+
+        position: relative;
+        top: -10vh;
+
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
+        height: 50vh;
+    }
+    
+    .weather_location {
+
+        position: relative;
+        top: -10vh;
+
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 5vh;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+
+        font-size: 5vw;
+        font-family: "formulaOneItalic";
+        color: white;
+    }
+    
+    .day_one {
+        width: 25vw;
+        height: 25vw;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, rgba(253, 255, 230, 1) 0%, rgba(136, 226, 224, 1) 65%);
+        border: 1vh solid white;
+        border-radius: 1vw;
+        box-shadow: 0px 31px 35px -26px #080c21;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .day_two {
+        width: 25vw;
+        height: 25vw;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, rgba(253, 255, 230, 1) 0%, rgba(148, 223, 221, 1) 0%, rgba(69, 69, 69, 1) 97%);
+        border: 1vh solid white;
+        border-radius: 1vw;
+        box-shadow: 0px 31px 35px -26px #080c21;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .day_three {
+        width: 25vw;
+        height: 25vw;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, rgba(253, 255, 230, 1) 0%, rgba(199, 199, 199, 1) 0%, rgba(69, 69, 69, 1) 97%);
+        border: 1vh solid white;
+        border-radius: 1vw;
+        box-shadow: 0px 31px 35px -26px #080c21;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .weather_image {
+        width: 8vw;
+        height: auto;
+    }
+    
+    .day {
+        font-family: 'formulaOneBold';
+        font-size: 2vw;
+    }
+    
+    .weather {
+        font-family: 'formulaOneWide';
+        font-size: 1vw;
+    }
+
+
+    
+    /***************************************************
+    this is the calendar block
+    ***************************************************/
+    
+    .calendar {
+        display: block;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(77, 77, 77, 1) 100%);
+        height: 80vh;
+    }
+    
+    .race_cards {
+        position: relative;
+        top: 25vh;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        background-color: rgb(203, 34, 34);
+
+        height: 30vh;
+    }
+    
+    .upcoming_race {
+        width: 33vw;
+        height: 30vh;
+        background-color: rgb(234, 25, 25);
+        border-radius: 2vw;
+        box-shadow: 0px 31px 3.5vw -1vw #080c21;
+        z-index: 1;
+        position: relative;
+        top: -2vh;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .not_the_race {
+        width: 33vw;
+        height: 30vh;
+        background-color: rgb(203, 34, 34);
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        filter: blur(.1vw);
+    }
+    
+    .track_image {
+        max-height: 10vw;
+    }
+    
+    .race_holder {
+        display: grid;
+        grid-template-columns: 10vw 10vw 5vw;
+    
+    }
+
+    .link_to_races {
+        position: relative;
+        top: 30vh;
+        display: flex;
+        justify-content: center;
+
+        color: red;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+
+    .link_to_races:hover {
+        color: black;
+    }
+    
+    .link_to_races::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+    
+        position: absolute;
+        top: 2vh;
+        left: 35vw;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+    
+    .link_to_races:hover::before {
+        width: 30vw;
+        position: absolute;
+        left: 35vw;
+    }
+
+}

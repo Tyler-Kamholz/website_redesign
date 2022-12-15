@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/main.css" rel="stylesheet">
+    <script src="../javascript files/main.js"></script>
+    <title>Formula 1</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="nav_bar">
+
+
+            <a href="./main_page.html"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+            <nav>
+                <ul>
+                    <li><a href="./standings.html">Standings</a></li>
+                    <li><a href="./next_race.html">Next Race</a></li>
+                    <li><a href="./team_info.html">Teams</a></li>
+                    <li><a href="./history.html">History</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+    <div class="next_race_images">
+
+        <div class="slider">
+            <div class="images">
+                <!--Image buttons-->
+                <input type="radio" name="radio-btn" id="image1">
+                <input type="radio" name="radio-btn" id="image2">
+                <input type="radio" name="radio-btn" id="image3">
+                <input type="radio" name="radio-btn" id="image4">
+
+                <!--Images-->
+                <div class="image first">
+                    <img src="../assets/race images/monaco1.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="../assets/race images/monaco2.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="../assets/race images/monaco3.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="../assets/race images/monaco4.jpg" alt="">
+                </div>
+
+                <!--Auto nav-->
+                <div class="auto_nav">
+                    <div class="auto_btn1"></div>
+                    <div class="auto_btn2"></div>
+                    <div class="auto_btn3"></div>
+                    <div class="auto_btn4"></div>
+                </div>
+
+                <!--Manual nav-->
+                <div class="manual_nav">
+                    <label for="image1" class="manual_button"></label>
+                    <label for="image2" class="manual_button"></label>
+                    <label for="image3" class="manual_button"></label>
+                    <label for="image4" class="manual_button"></label>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+    <div class="poll_positions">
+
+        <div class="poll_info">
+            <div class="podeum">
+                <div id="third">
+                    <div id="third_face"><img class="drivers_face" src="../assets/Drivers/lewis_44.png" alt="driver's face"></div>
+                    <p id="third_number">44</p>
+                    <p id="third_name">Lewis Haml.</p>
+                    <p id="third_points">254pts</p>
+                </div>
+                <div id="second">
+                    <div id="second_face"><img class="drivers_face" src="../assets/Drivers/lando_4.png" alt="driver's face"></div>
+                    <p id="second_number">4</p>
+                    <p id="second_name">Lando Nor.</p>
+                    <p id="second_points">311pts</p>
+                </div>
+                <div id="first">
+                    <div id="first_face"><img class="drivers_face" src="../assets/Drivers/max_1.png" alt="driver's face"></div>
+                    <p id="first_number">1</p>
+                    <p id="first_name">Max Verst.</p>
+                    <p id="first_points">346pts</p>
+                </div>
+            </div>
+
+            <a href="../pages/standings.html" class="links">More</a>
+        </div>
+
+
+    </div>
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+    <div class="next_race_weather">
+
+        <p class="weather_location" id="city">Weather In Monaco</p>
+
+        <div class="three_day_weather">
+            <div class="day_one">
+                <p class="day">Friday</p>
+                <img class="weather_image" id="first_day" src="../assets/weather_two/256px/Sun.png" alt="weather image">
+                <p class="temp">73</p>
+                <p class="weather">Sunny</p>
+            </div>
+            <div class="day_two">
+                <p class="day">Saturday</p>
+                <img class="weather_image" id="second_day" src="../assets/weather_two/256px/Cloud-Morning.png" alt="weather image">
+                <p class="temp">68</p>
+                <p class="weather">Partly Cloudy</p>
+            </div>
+            <div class="day_three">
+                <p class="day">Sunday</p>
+                <img class="weather_image" id="third_day" src="../assets/weather_two/256px/Cloud-Rainy.png" alt="weather image">
+                <p class="temp">72</p>
+                <p class="weather">Rainy</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+    <div class="calendar">
+
+        <div class="race_cards">
+            <div class="not_the_race" id="prev_race">
+                <div class="race_holder">
+                    <div class="location">United States</div>
+                    <div></div>
+                    <img class="flag" src="" alt="flag">
+                </div>
+                <div class="track"><img class="track_image" src="../assets/tracks/miami_track.png" alt="track"></div>
+                <div class="race_dates">May 06-08</div>
+            </div>
+            <div class="upcoming_race">
+                <div class="race_holder">
+                    <div class="location">Monaco</div>
+                    <div></div>
+                    <img class="flag" src="" alt="flag">
+                </div>
+                <div class="track"><img class="track_image" src="../assets/tracks/monaco_track.png" alt="track"></div>
+                <div class="race_dates">May 27-29</div>
+            </div>
+            <div class="not_the_race" id="next_race">
+                <div class="race_holder">
+                    <div class="location">France</div>
+                    <div></div>
+                    <img class="flag" src="" alt="flag">
+                </div>
+                <div class="track"><img class="track_image" src="../assets/tracks/france_track.png" alt="track"></div>
+                <div class="race_dates">Jul 22-24</div>
+            </div>
+        </div>
+
+        <a href="../pages/next_race.html" class="link_to_races">More</a>
+
+    </div>
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+    <footer>
+        <p>Website redesign by Tyler Kamholz for Web Dev Class</p>
+    </footer>
+
+</body>
+
+</html>

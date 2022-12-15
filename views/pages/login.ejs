@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/login.css" rel="stylesheet">
+    <title>Login</title>
+
+</head>
+
+<header>
+    <div class="nav_bar">
+
+
+        <a href="home"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li><a href="standings">Standings</a></li>
+                    <li><a href="races">Next Race</a></li>
+                    <li><a href="teams">Teams</a></li>
+                    <li><a href="history">History</a></li>
+                    <li><a href="user">Login</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<body>
+
+    <div class="logins">
+
+        <div></div>
+
+        <div>
+            <form class="login_box" method="POST" action="user">
+                <h1>Login</h1>
+                <div class="login_info">
+                    <p class="text">Username:</p>
+                    <input type="text" name="username" placeholder="Enter Username" required>
+                </div>
+                <div class="login_info">
+                    <p class="text">Password:</p>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <input class="button" type="submit" name="" value="Login">
+            </form>
+        </div>
+
+        <div></div>
+
+        <div>
+            <form class="login_box" method="POST" action="new_user">
+                <h1>Sign Up</h1>
+                <div class="login_info">
+                    <p class="text">Username:</p>
+                    <input type="text" name="username" placeholder="Enter Username" required>
+                </div>
+                <div class="login_info">
+                    <p class="text">Password:</p>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <input class="button" type="submit" name="" value="Login">
+            </form>
+        </div>
+
+        <div></div>
+
+    </div>
+
+</body>
+
+<footer>
+    <p>Website redesign by Tyler Kamholz for Web Dev Class</p>
+</footer>
+
+</html>

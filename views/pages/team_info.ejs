@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/team_info.css" rel="stylesheet">
+    <title>Teams</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="nav_bar">
+
+            <a href="home"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+            <nav>
+                <ul>
+                    <li><a href="standings">Standings</a></li>
+                    <li><a href="races">Next Race</a></li>
+                    <li><a href="teams">Teams</a></li>
+                    <li><a href="history">History</a></li>
+                    <% if(session.loggedIn) { %>
+
+                        <li><a
+
+                            <%=  'href=user' %>
+                            >
+                            <%= "Profile" %>
+
+                        </a></li>
+                            
+                        <% } else { %>
+
+                            <li><a
+
+                                <%=  'href=login' %>
+                                >
+                                <%= "Login" %>
+    
+                            </a></li>
+
+                        <% } %>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <div class="teams">
+        <img class="dots1" src="../assets/dot_grid.png">
+        <img class="dots2" src="../assets/dot_grid.png">
+
+        <div class="team_info" id="one">
+
+            <div class="not_car">
+
+                <div class="not_driver_info">
+
+                    <div class="poll">
+
+                        <div class="position">1</div>
+                        <div class="points">
+                            <div><%= team_results[0].points %></div>
+                            <div>PTS</div>
+                        </div>
+
+                    </div>
+
+                    <div class="team">
+                        <div class="team_name" id="team_one"><%= team_results[0].team %></div>
+                        <img class="team_logo" src="<%= team_results[0].logo_image %>">
+                    </div>
+
+                    <img class="team_car" src="<%= team_results[0].car_image %>">
+                </div>
+
+                <div class="drivers">
+                    <div class="driver1">
+                        <div class="name"><%= team_results[0].driver_one_firstname %> <%= team_results[0].driver_one_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[0].driver_one_image %>">
+                    </div>
+                    <div class="driver2">
+                        <div class="name"><%= team_results[0].driver_two_firstname %> <%= team_results[0].driver_two_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[0].driver_two_image %>">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="space"></div>
+
+        <div class="team_info" id="two">
+
+            <div class="not_car">
+
+                <div class="not_driver_info">
+
+                    <div class="poll">
+
+                        <div class="position">2</div>
+                        <div class="points">
+                            <div><%= team_results[1].points %></div>
+                            <div>PTS</div>
+                        </div>
+
+                    </div>
+
+                    <div class="team">
+                        <div class="team_name" id="team_two"><%= team_results[1].team %></div>
+                        <img class="team_logo" src="<%= team_results[1].logo_image %>">
+                    </div>
+
+                    <img class="team_car" src="<%= team_results[1].car_image %>">
+                </div>
+
+                <div class="drivers">
+                    <div class="driver1">
+                        <div class="name"><%= team_results[1].driver_one_firstname %> <%= team_results[1].driver_one_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[1].driver_one_image %>">
+                    </div>
+                    <div class="driver2">
+                        <div class="name"><%= team_results[1].driver_two_firstname %> <%= team_results[1].driver_two_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[1].driver_two_image %>">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="space"></div>
+
+        <div class="team_info" id="three">
+
+            <div class="not_car">
+
+                <div class="not_driver_info">
+
+                    <div class="poll">
+
+                        <div class="position">3</div>
+                        <div class="points">
+                            <div><%= team_results[2].points %></div>
+                            <div>PTS</div>
+                        </div>
+
+                    </div>
+
+                    <div class="team">
+                        <div class="team_name" id="team_three"><%= team_results[2].team %></div>
+                        <img class="team_logo" src="<%= team_results[2].logo_image %>">
+                    </div>
+
+                    <img class="team_car" src="<%= team_results[2].car_image %>">
+                </div>
+
+                <div class="drivers">
+                    <div class="driver1">
+                        <div class="name"><%= team_results[2].driver_one_firstname %> <%= team_results[2].driver_one_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[2].driver_one_image %>">
+                    </div>
+                    <div class="driver2">
+                        <div class="name"><%= team_results[2].driver_two_firstname %> <%= team_results[2].driver_two_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[2].driver_two_image %>">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="space"></div>
+
+        <div class="team_info" id="four">
+
+            <div class="not_car">
+
+                <div class="not_driver_info">
+
+                    <div class="poll">
+
+                        <div class="position">4</div>
+                        <div class="points">
+                            <div><%= team_results[3].points %></div>
+                            <div>PTS</div>
+                        </div>
+
+                    </div>
+
+                    <div class="team">
+                        <div class="team_name" id="team_four"><%= team_results[3].team %></div>
+                        <img class="team_logo" src="<%= team_results[3].logo_image %>">
+                    </div>
+
+                    <img class="team_car" src="<%= team_results[3].car_image %>">
+                </div>
+
+                <div class="drivers">
+                    <div class="driver1">
+                        <div class="name"><%= team_results[3].driver_one_firstname %> <%= team_results[3].driver_one_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[3].driver_one_image %>">
+                    </div>
+                    <div class="driver2">
+                        <div class="name"><%= team_results[3].driver_two_firstname %> <%= team_results[3].driver_two_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[3].driver_two_image %>">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="space"></div>
+
+        <div class="team_info" id="five">
+
+            <div class="not_car">
+
+                <div class="not_driver_info">
+
+                    <div class="poll">
+
+                        <div class="position">5</div>
+                        <div class="points">
+                            <div><%= team_results[4].points %></div>
+                            <div>PTS</div>
+                        </div>
+
+                    </div>
+
+                    <div class="team">
+                        <div class="team_name" id="team_five"><%= team_results[4].team %></div>
+                        <img class="team_logo" src="<%= team_results[4].logo_image %>">
+                    </div>
+
+                    <img class="team_car" src="<%= team_results[4].car_image %>">
+                </div>
+
+                <div class="drivers">
+                    <div class="driver1">
+                        <div class="name"><%= team_results[4].driver_one_firstname %> <%= team_results[4].driver_one_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[4].driver_one_image %>">
+                    </div>
+                    <div class="driver2">
+                        <div class="name"><%= team_results[4].driver_two_firstname %> <%= team_results[4].driver_two_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[4].driver_two_image %>">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="space"></div>
+
+        <div class="team_info" id="six">
+
+            <div class="not_car">
+
+                <div class="not_driver_info">
+
+                    <div class="poll">
+
+                        <div class="position">6</div>
+                        <div class="points">
+                            <div><%= team_results[5].points %></div>
+                            <div>PTS</div>
+                        </div>
+
+                    </div>
+
+                    <div class="team">
+                        <div class="team_name" id="team_six"><%= team_results[5].team %></div>
+                        <img class="team_logo" src="<%= team_results[5].logo_image %>">
+                    </div>
+
+                    <img class="team_car" src="<%= team_results[5].car_image %>">
+                </div>
+
+                <div class="drivers">
+                    <div class="driver1">
+                        <div class="name"><%= team_results[5].driver_one_firstname %> <%= team_results[5].driver_one_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[5].driver_one_image %>">
+                    </div>
+                    <div class="driver2">
+                        <div class="name"><%= team_results[5].driver_two_firstname %> <%= team_results[5].driver_two_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[5].driver_two_image %>">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="space"></div>
+
+        <div class="team_info" id="seven">
+
+            <div class="not_car">
+
+                <div class="not_driver_info">
+
+                    <div class="poll">
+
+                        <div class="position">7</div>
+                        <div class="points">
+                            <div><%= team_results[6].points %></div>
+                            <div>PTS</div>
+                        </div>
+
+                    </div>
+
+                    <div class="team">
+                        <div class="team_name" id="team_seven"><%= team_results[6].team %></div>
+                        <img class="team_logo" src="<%= team_results[6].logo_image %>">
+                    </div>
+
+                    <img class="team_car" src="<%= team_results[6].car_image %>">
+                </div>
+
+                <div class="drivers">
+                    <div class="driver1">
+                        <div class="name"><%= team_results[6].driver_one_firstname %> <%= team_results[6].driver_one_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[6].driver_one_image %>">
+                    </div>
+                    <div class="driver2">
+                        <div class="name"><%= team_results[6].driver_two_firstname %> <%= team_results[6].driver_two_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[6].driver_two_image %>">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="space"></div>
+
+        <div class="team_info" id="eight">
+
+            <div class="not_car">
+
+                <div class="not_driver_info">
+
+                    <div class="poll">
+
+                        <div class="position">8</div>
+                        <div class="points">
+                            <div><%= team_results[7].points %></div>
+                            <div>PTS</div>
+                        </div>
+
+                    </div>
+
+                    <div class="team">
+                        <div class="team_name" id="team_eight"><%= team_results[7].team %></div>
+                        <img class="team_logo" src="<%= team_results[7].logo_image %>">
+                    </div>
+
+                    <img class="team_car" src="<%= team_results[7].car_image %>">
+                </div>
+
+                <div class="drivers">
+                    <div class="driver1">
+                        <div class="name"><%= team_results[7].driver_one_firstname %> <%= team_results[7].driver_one_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[7].driver_one_image %>">
+                    </div>
+                    <div class="driver2">
+                        <div class="name"><%= team_results[7].driver_two_firstname %> <%= team_results[7].driver_two_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[7].driver_two_image %>">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="space"></div>
+
+        <div class="team_info" id="nine">
+
+            <div class="not_car">
+
+                <div class="not_driver_info">
+
+                    <div class="poll">
+
+                        <div class="position">9</div>
+                        <div class="points">
+                            <div><%= team_results[8].points %></div>
+                            <div>PTS</div>
+                        </div>
+
+                    </div>
+
+                    <div class="team">
+                        <div class="team_name" id="team_nine"><%= team_results[8].team %></div>
+                        <img class="team_logo" src="<%= team_results[8].logo_image %>">
+                    </div>
+
+                    <img class="team_car" src="<%= team_results[8].car_image %>">
+                </div>
+
+                <div class="drivers">
+                    <div class="driver1">
+                        <div class="name"><%= team_results[8].driver_one_firstname %> <%= team_results[8].driver_one_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[8].driver_one_image %>">
+                    </div>
+                    <div class="driver2">
+                        <div class="name"><%= team_results[8].driver_two_firstname %> <%= team_results[8].driver_two_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[8].driver_two_image %>">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="space"></div>
+
+        <div class="team_info" id="ten">
+
+            <div class="not_car">
+
+                <div class="not_driver_info">
+
+                    <div class="poll">
+
+                        <div class="position">10</div>
+                        <div class="points">
+                            <div><%= team_results[9].points %></div>
+                            <div>PTS</div>
+                        </div>
+
+                    </div>
+
+                    <div class="team">
+                        <div class="team_name" id="team_ten"><%= team_results[9].team %></div>
+                        <img class="team_logo" src="<%= team_results[9].logo_image %>">
+                    </div>
+
+                    <img class="team_car" src="<%= team_results[9].car_image %>">
+                </div>
+
+                <div class="drivers">
+                    <div class="driver1">
+                        <div class="name"><%= team_results[9].driver_one_firstname %> <%= team_results[9].driver_one_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[9].driver_one_image %>">
+                    </div>
+                    <div class="driver2">
+                        <div class="name"><%= team_results[9].driver_two_firstname %> <%= team_results[9].driver_two_lastname %></div>
+                        <img class="driver_image" src="<%= team_results[9].driver_two_image %>">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="space"></div>
+
+    </div>
+
+    <footer>
+        <p>Website redesign by Tyler Kamholz for Web Dev Class</p>
+    </footer>
+
+</body>
+
+</html>

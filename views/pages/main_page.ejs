@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/main.css" rel="stylesheet">
+    <script src="/javascript files/main.js"></script>
+    <title>Formula 1</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="nav_bar">
+
+            <a href="home"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+            <nav>
+                <ul>
+                    <li><a href="standings">Standings</a></li>
+                    <li><a href="races">Next Race</a></li>
+                    <li><a href="teams">Teams</a></li>
+                    <li><a href="history">History</a></li>
+
+                    <% if(session.loggedIn) { %>
+
+                        <li><a <%='href=user' %>
+                                >
+                                <%= "Profile" %>
+
+                            </a></li>
+
+                        <% } else { %>
+
+                            <li><a <%='href=login' %>
+                                    >
+                                    <%= "Login" %>
+
+                                </a></li>
+
+                            <% } %>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+    <div class="next_race_images">
+
+        <div class="slider">
+            <div class="images">
+                <!--Image buttons-->
+                <input type="radio" name="radio-btn" id="image1">
+                <input type="radio" name="radio-btn" id="image2">
+                <input type="radio" name="radio-btn" id="image3">
+                <input type="radio" name="radio-btn" id="image4">
+
+                <!--Images-->
+                <div class="image first">
+                    <img src="../assets/race images/monaco1.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="../assets/race images/monaco2.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="../assets/race images/monaco3.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="../assets/race images/monaco4.jpg" alt="">
+                </div>
+
+                <!--Auto nav-->
+                <div class="auto_nav">
+                    <div class="auto_btn1"></div>
+                    <div class="auto_btn2"></div>
+                    <div class="auto_btn3"></div>
+                    <div class="auto_btn4"></div>
+                </div>
+
+                <!--Manual nav-->
+                <div class="manual_nav">
+                    <label for="image1" class="manual_button"></label>
+                    <label for="image2" class="manual_button"></label>
+                    <label for="image3" class="manual_button"></label>
+                    <label for="image4" class="manual_button"></label>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+    
+    <div class="poll_positions">
+
+        <div class="poll_info">
+            <div class="podeum">
+                <div id="third">
+                    <div id="third_face"><img class="drivers_face" src="../assets/Drivers/lewis_44.png"
+                            alt="driver's face"></div>
+                    <p id="third_number">44</p>
+                    <p id="third_name">Lewis Haml.</p>
+                    <p id="third_points">254pts</p>
+                </div>
+                <div id="second">
+                    <div id="second_face"><img class="drivers_face" src="../assets/Drivers/lando_4.png"
+                            alt="driver's face"></div>
+                    <p id="second_number">4</p>
+                    <p id="second_name">Lando Nor.</p>
+                    <p id="second_points">311pts</p>
+                </div>
+                <div id="first">
+                    <div id="first_face"><img class="drivers_face" src="../assets/Drivers/max_1.png"
+                            alt="driver's face"></div>
+                    <p id="first_number">1</p>
+                    <p id="first_name">Max Verst.</p>
+                    <p id="first_points">346pts</p>
+                </div>
+            </div>
+
+            <a href="../pages/standings.html" class="links">More</a>
+        </div>
+
+
+    </div>
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+    <div class="next_race_weather">
+
+        <p class="weather_location" id="city">Weather In Monaco</p>
+
+        <div class="three_day_weather">
+            <div class="day_one">
+                <img class="weather_image" id="weather_image" src="../assets/weather_two/256px/Sun.png"
+                    alt="weather image">
+                <p class="temp" id="temp">73</p>
+                <p class="weather" id="weather">Sunny</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+
+    <footer>
+        <p>Website redesign by Tyler Kamholz for Web Dev Class</p>
+    </footer>
+
+</body>
+
+</html>

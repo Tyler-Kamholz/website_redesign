@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/standings.css" rel="stylesheet">
+    <title>Positions</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="nav_bar">
+
+            <a href="home"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+            <nav>
+                <ul>
+                    <li><a href="standings">Standings</a></li>
+                    <li><a href="races">Next Race</a></li>
+                    <li><a href="teams">Teams</a></li>
+                    <li><a href="history">History</a></li>
+                    <% if(session.loggedIn) { %>
+
+                        <li><a
+
+                            <%=  'href=user' %>
+                            >
+                            <%= "Profile" %>
+
+                        </a></li>
+                            
+                        <% } else { %>
+
+                            <li><a
+
+                                <%=  'href=login' %>
+                                >
+                                <%= "Login" %>
+    
+                            </a></li>
+
+                        <% } %>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+    <div class="standings">
+
+        <div class="driver_text">
+            <p>2022 Driver Standings</p>
+        </div>
+
+        <div class="background_bubble">
+            <table class="drivers_positions">
+                <tr>
+                    <th>Pos.</th>
+                    <th>Driver</th>
+                    <th>Team</th>
+                    <th>Points</th>
+                </tr>
+
+                <% for(var i=0; i < driver_results.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= i + 1 %>
+                        </td>
+                        <td>
+                            <%= driver_results[i].last_name %>
+                        </td>
+                        <td>
+                            <%= driver_results[i].team %>
+                        </td>
+                        <td>
+                            <%= driver_results[i].points %>
+                        </td>
+                    </tr>
+                    <% } %>
+
+            </table>
+        </div>
+
+        <div class="team_text">
+            <p>2022 Team Standings</p>
+        </div>
+
+        <div class="background_bubble2">
+            <table class="teams_positions">
+
+                <tr>
+                    <th>Pos.</th>
+                    <th>Team</th>
+                    <th>points</th>
+                </tr>
+
+                <% for(var i=0; i < team_results.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= i + 1 %>
+                        </td>
+                        <td>
+                            <%= team_results[i].team %>
+                        </td>
+                        <td>
+                            <%= team_results[i].points %>
+                        </td>
+                    </tr>
+                    <% } %>
+
+            </table>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>Website redesign by Tyler Kamholz for Web Dev Class</p>
+    </footer>
+
+
+</body>
+
+
+</html>

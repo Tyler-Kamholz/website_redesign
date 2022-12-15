@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/profile_edit.css" rel="stylesheet">
+    <title>User</title>
+</head>
+
+<header>
+    <div class="nav_bar">
+
+        <a href="./main_page.html"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li><a href="./standings.html">Standings</a></li>
+                <li><a href="./next_race.html">Next Race</a></li>
+                <li><a href="./team_info.html">Teams</a></li>
+                <li><a href="./history.html">History</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<body>
+    <form method="POST" action="../pages/login.html">
+
+        <div class="name">
+            <h1>Name:</h1>
+            <input type="text" value="Tyler">
+        </div>
+        <div class="team">
+            <h1>Favorite Team:</h1>
+            <select name="Favorite Team">
+                <option value="Red Bull Racing">Red Bull Racing</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Alpine">Alpine</option>
+                <option value="Mclaren" selected>Mclaren</option>
+                <option value="Alfa Romeo">Alfa Romeo</option>
+                <option value="Aston Martin">Aston Martin</option>
+                <option value="Haas F1 Team">Haas F1 Team</option>
+                <option value="AlphaTauri">AlphaTauri</option>
+                <option value="Williams">Williams</option>
+            </select>    
+
+            <h1>Favorite Driver:</h1>
+            <select name="Favorite Driver">
+                <option value="Max Verstappen">Max Verstappen</option>
+                <option value="Sergio Perez">Sergio Perez</option>
+                <option value="Charles Leclerc">Charles Leclerc</option>
+                <option value="Carlos Sainz">Carlos Sainz</option>
+                <option value="George Russell">George Russell</option>
+                <option value="Lewis Hamilton">Lewis Hamilton</option>
+                <option value="Esteban Ocon">Esteban Ocon</option>
+                <option value="Fernando Alonso">Fernando Alonso</option>
+                <option value="Lando Norris" selected>Lando Norris</option>
+                <option value="Daniel Ricciardo">Daniel Ricciardo</option>
+                <option value="Valtteri Bottas">Valtteri Bottas</option>
+                <option value="Zhou Guanyu">Zhou Guanyu</option>
+                <option value="Lance Stroll">Lance Stroll</option>
+                <option value="Sebastian Vettel">Sebastian Vettel</option>
+                <option value="Mick Schumacher">Mick Schumacher</option>
+                <option value="Kevin Magnussen">Kevin Magnussen</option>
+                <option value="Pierre Gasly">Pierre Gasly</option>
+                <option value="Yuki Tsunoda">Yuki Tsunoda</option>
+                <option value="Nicholas Latifi">Nicholas Latifi</option>
+                <option value="Alexander Albon">Alexander Albon</option>
+            </select>
+        </div>
+        <div class="track">
+            <h1>Favorite Track:</h1>
+            <select name="Favorite Track">
+                <option value="Bahrain">Bahrain</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Australia">Australian</option>
+                <option value="Emilia Romagna">Emilia Romagna</option>
+                <option value="Miami">Miami</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Monaco" selected>Monaco</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Canadian">Canadian</option>
+                <option value="British">British</option>
+                <option value="Austrian">Austrian</option>
+                <option value="French">French</option>
+                <option value="Hungarian">Hungarian</option>
+                <option value="Belgian">Belgian</option>
+                <option value="Dutch">Dutch</option>
+                <option value="Italian">Italian</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Japanese">Japanese</option>
+                <option value="United States">United States</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Brazilian">Brazilian</option>
+                <option value="Abu Dhabi">Abu Dhabi</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Update">
+
+    </form>
+</body>
+
+</html>

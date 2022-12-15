@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/profile_edit.css" rel="stylesheet">
+    <title>F1 Edit Page</title>
+
+</head>
+
+<header>
+
+    <div class="nav_bar">
+
+        <a href="home"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li><a href="standings">Standings</a></li>
+                <li><a href="races">Next Race</a></li>
+                <li><a href="teams">Teams</a></li>
+                <li><a href="history">History</a></li>
+
+                <% if(session.loggedIn) { %>
+
+                    <li><a
+
+                        <%=  'href=user' %>
+                        >
+                        <%= "Profile" %>
+
+                    </a></li>
+                        
+                    <% } else { %>
+
+                        <li><a
+
+                            <%=  'href=login' %>
+                            >
+                            <%= "Login" %>
+
+                        </a></li>
+
+                    <% } %>
+
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<body>
+    
+    <h1>Drivers</h1>
+
+    <ul>
+
+        <li><a href="add_driver">Add Driver</a></li>
+        <li><a href="remove_driver">Remove Driver</a></li>
+        <li><a href="update_driver">Update Driver</a></li>
+
+    </ul>
+
+    <h1>Races</h1>
+
+    <ul>
+
+        <li><a href="add_race">Add Race</a></li>
+        <li><a href="remove_race">Remove Race</a></li>
+
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/profile_edit.css" rel="stylesheet">
+    <title>User</title>
+</head>
+
+<header>
+
+    <div class="nav_bar">
+
+        <a href="home"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li><a href="standings">Standings</a></li>
+                <li><a href="races">Next Race</a></li>
+                <li><a href="teams">Teams</a></li>
+                <li><a href="history">History</a></li>
+
+                <% if(session.loggedIn) { %>
+
+                    <li><a
+
+                        <%=  'href=user' %>
+                        >
+                        <%= "Profile" %>
+
+                    </a></li>
+                        
+                    <% } else { %>
+
+                        <li><a
+
+                            <%=  'href=login' %>
+                            >
+                            <%= "Login" %>
+
+                        </a></li>
+
+                    <% } %>
+
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<body>
+    <form method="POST" action="update_user">
+
+        <div class="name">
+            <h1>Name:</h1>
+            <input type="text" name="name" value="<%= session.name %>">
+        </div>
+        <div class="team">
+            <h1>Favorite Team:</h1>
+            <select name="favorite_team">
+                <% for(var i = 0; i < teams.length; i++) { %>
+
+                    <option value="<%= teams[i].team %>"><%= teams[i].team %></option>
+    
+                <% } %>
+            </select>    
+
+
+            <% for(var i = 0; i < teams.length; i++) { %>
+
+                <option value="<%= teams[i].team %>"><%= teams[i].team %></option>
+
+            <% } %>
+
+
+            <h1>Favorite Driver:</h1>
+            <select name="favorite_driver">
+
+                <% for(var i = 0; i < teams.length; i++) { %>
+
+                    <option value="<%= teams[i].driver_one_firstname %> <%= teams[i].driver_one_lastname %>"><%= teams[i].driver_one_firstname %> <%= teams[i].driver_one_lastname %></option>
+                    <option value="<%= teams[i].driver_two_firstname %> <%= teams[i].driver_two_lastname %>"><%= teams[i].driver_two_firstname %> <%= teams[i].driver_two_lastname %></option>
+
+                <% } %>
+
+            </select>
+        </div>
+        <div class="track">
+            <h1>Favorite Track:</h1>
+            <select name="favorite_track">
+
+                <% for(var i = 0; i < races.length; i++) { %>
+
+                    <option value="<%= races[i].race_name %>"><%= races[i].race_name %></option>
+
+                <% } %>
+
+            </select>
+        </div>
+
+        <input type="submit" value="Update">
+
+    </form>
+</body>
+
+</html>

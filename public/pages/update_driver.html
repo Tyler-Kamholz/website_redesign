@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Driver</title>
+</head>
+<body>
+
+    <form method="POST" action="update_driver">
+
+        <p>First Name</p>
+        <select name="first_name">
+            <option value="Max Verstappen">Max Verstappen</option>
+            <option value="Sergio Perez">Sergio Perez</option>
+            <option value="Charles Leclerc">Charles Leclerc</option>
+            <option value="Carlos Sainz">Carlos Sainz</option>
+            <option value="George Russell">George Russell</option>
+            <option value="Lewis Hamilton">Lewis Hamilton</option>
+            <option value="Esteban Ocon">Esteban Ocon</option>
+            <option value="Fernando Alonso">Fernando Alonso</option>
+            <option value="Lando Norris" selected>Lando Norris</option>
+            <option value="Daniel Ricciardo">Daniel Ricciardo</option>
+            <option value="Valtteri Bottas">Valtteri Bottas</option>
+            <option value="Zhou Guanyu">Zhou Guanyu</option>
+            <option value="Lance Stroll">Lance Stroll</option>
+            <option value="Sebastian Vettel">Sebastian Vettel</option>
+            <option value="Mick Schumacher">Mick Schumacher</option>
+            <option value="Kevin Magnussen">Kevin Magnussen</option>
+            <option value="Pierre Gasly">Pierre Gasly</option>
+            <option value="Yuki Tsunoda">Yuki Tsunoda</option>
+            <option value="Nicholas Latifi">Nicholas Latifi</option>
+            <option value="Alexander Albon">Alexander Albon</option>
+        </select>
+        
+        <p>Race Number</p>
+        <input type="text" name="race_number" placeholder="Enter Race Number" required>
+        <p>Team</p>
+        <select name="team">
+            <option value="Red Bull Racing">Red Bull Racing</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Alpine">Alpine</option>
+            <option value="Mclaren" selected>Mclaren</option>
+            <option value="Alfa Romeo">Alfa Romeo</option>
+            <option value="Aston Martin">Aston Martin</option>
+            <option value="Haas F1 Team">Haas F1 Team</option>
+            <option value="AlphaTauri">AlphaTauri</option>
+            <option value="Williams">Williams</option>
+        </select> 
+        <p>Driver Points</p>
+        <input type="text" name="driver_points" placeholder="Enter Driver Points" required>
+        <p>Driver Photo</p>
+        <input type="file" name="driver_photo">
+
+        <input type="submit" value="Update Driver">
+
+    </form>
+    
+</body>
+</html>

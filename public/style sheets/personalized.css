@@ -1,0 +1,370 @@
+@font-face {
+    font-family: 'formulaOneRegular';
+    src: url(../fonts/Formula1-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneBold';
+    src: url(../fonts/Formula1-Bold.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneItalic';
+    src: url(../fonts/Formula1-Italic.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneWide';
+    src: url(../fonts/Formula1-Wide.woff2);
+}
+
+html {
+    background-color: red;
+}
+
+body {
+    background-blend-mode: linear-gradient(red, black);
+    margin: 0;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+/***************************************************
+this is the header css
+***************************************************/
+
+header {
+    background: red;
+    height: 10vh;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.nav_bar {
+    margin: 0 auto;
+    width: 100vw;
+    height: 10vh;
+}
+
+.logo {
+    position: relative;
+    top: 3vh;
+    left: -6vw;
+    width: 10vw;
+    padding-left: 10vw;
+
+    transition: all ease-in-out 250ms;
+}
+
+.logo:hover {
+    filter: invert(100%);
+}
+
+nav {
+    float: right;
+    padding-right: 5vw;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 2vw;
+    padding-top: 8vh;
+    padding-bottom: 3vh;
+
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8vw;
+    font-family: 'formulaOneRegular';
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: .3vh;
+    background-color: black;
+
+    position: absolute;
+    top: 7vh;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/***************************************************
+this is the body css
+***************************************************/
+
+.info {
+    background-color: white;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 1vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user_info {
+    display: grid;
+    grid-template-columns: 10vw 80vw 10vw;
+
+    padding-top: 5vh;
+}
+
+.name {
+    font-family: "FormulaOneRegular";
+    font-size: medium;
+
+    width: 80vw;
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: black 1px solid;
+}
+
+.favorite_team {
+    width: 50vw;
+    height: 20vh;
+
+    display: flex;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 15vw;
+}
+
+.text h1 {
+    padding-left: 2vw;
+    font-family: "FormulaOneItalic";
+    font-size: small;
+}
+
+.text h2 {
+    font-family: "FormulaOneBold";
+    font-size: medium;
+    padding-left: 2vw;
+}
+
+.favorite_team img {
+    height: 20vh;
+    padding-right: .1vw;
+    padding-left: .1vw;
+}
+
+.favorite_driver {
+    width: 30vw;
+    height: 20vh;
+    border-left: 1px dotted black;
+
+    display: flex;
+}
+
+.favorite_driver img {
+    height: 20vh;
+    padding-left: 5vw;
+}
+
+.text2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 10vw;
+}
+
+.text2 h1 {
+    padding-left: 2vw;
+    font-family: "FormulaOneItalic";
+    font-size: small;
+}
+
+.text2 h2 {
+    font-family: "FormulaOneBold";
+    font-size: small;
+    padding-left: 2vw;
+}
+
+.team_info {
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.favorite_track {
+    width: 80vw;
+    height: 30vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.favorite_track img {
+    filter: invert(100%);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    height: 26vh;
+}
+
+.text3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 30vw;
+}
+
+.text3 h1 {
+    padding-left: 2vw;
+    font-family: "FormulaOneItalic";
+    font-size: large;
+}
+
+.text3 h2 {
+    font-family: "FormulaOneBold";
+    font-size: medium;
+    padding-left: 2vw;
+}
+
+
+
+
+
+
+
+.edit {
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+    display: flex;
+    justify-content: center;
+}
+
+.edit a {
+    color: red;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-family: 'formulaOneRegular';
+    transition: all ease-in-out 250ms;
+}
+
+.edit a:hover {
+    color: black;
+}
+
+.edit a::before {
+    content: '';
+    display: block;
+    height: .3vh;
+    background-color: black;
+
+    position: absolute;
+    top: 79vh;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+.edit a:hover::before {
+    width: 8vw;
+}
+
+.edit_info {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.edit_info a {
+    color: red;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-family: 'formulaOneRegular';
+    transition: all ease-in-out 250ms;
+}
+
+.edit_info a:hover {
+    color: black;
+}
+
+.edit_info a::before {
+    content: '';
+    display: block;
+    height: .3vh;
+    background-color: black;
+
+    position: absolute;
+    top: 84vh;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+.edit_info a:hover::before {
+    width: 10vw;
+}
+
+.logout {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.logout a {
+    color: red;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-family: 'formulaOneRegular';
+    transition: all ease-in-out 250ms;
+}
+
+.logout a:hover {
+    color: black;
+}
+
+.logout a::before {
+    content: '';
+    display: block;
+    height: .3vh;
+    background-color: black;
+
+    position: absolute;
+    top: 93vh;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+.logout a:hover::before {
+    width: 5vw;
+}

@@ -1,0 +1,673 @@
+@font-face {
+    font-family: 'formulaOneRegular';
+    src: url(../fonts/Formula1-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneBold';
+    src: url(../fonts/Formula1-Bold.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneItalic';
+    src: url(../fonts/Formula1-Italic.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneWide';
+    src: url(../fonts/Formula1-Wide.woff2);
+}
+
+@font-face {
+    font-family: 'tableFont';
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+/*Desktop View*/
+@media screen and (min-aspect-ratio: 16/10) and (max-aspect-ratio: 21/9)  and (min-height: 375px) {
+    html {
+        background-color: red;
+    }
+
+    body {
+        background-blend-mode: linear-gradient(red, black);
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /***************************************************
+    this is the header css
+    ***************************************************/
+
+    header {
+        background: red;
+        height: 10vh;
+    }
+
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .nav_bar {
+        margin: 0 auto;
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .logo {
+        position: relative;
+        top: 3vh;
+        left: -6vw;
+        width: 10vw;
+        padding-left: 10vw;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    .logo:hover {
+        filter: invert(100%);
+    }
+
+    nav {
+        float: right;
+        padding-right: 5vw;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 2vw;
+        padding-top: 8vh;
+        padding-bottom: 3vh;
+
+        position: relative;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: .8vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+
+        position: absolute;
+        top: 7vh;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        width: 100%;
+    }
+
+    /***************************************************
+    this is the drivers table css
+    ***************************************************/
+
+    .background_bubble {
+        width: 95vw;
+        height: 180vh;
+        background-color: white;
+        border-radius: 2vw;
+        box-shadow: 0px 0px 20px 5px;
+
+        position: relative;
+        margin-top: 10vh;
+        left: 5vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .driver_text {
+        color: white;
+        font-size: 5vh;
+        font-family: 'formulaOneRegular';
+        padding-left: 5vw;
+        
+        position: relative;
+        top: 4vh;
+    }
+
+    .drivers_positions {
+        height: 180vh;
+        width: 95vw;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: "tableFont";
+
+
+        border-collapse: collapse;
+        border-radius: 2vw;
+    }
+
+    th,
+    td {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+
+    tr:nth-child(even) {
+
+        background-color: rgba(255, 231, 231, 0.622);
+    }
+
+    /***************************************************
+    this is the drivers table css
+    ***************************************************/
+
+
+    .background_bubble2 {
+        width: 95vw;
+        height: 90vh;
+        background-color: white;
+        border-radius: 2vw;
+        box-shadow: 0px 0px 20px 5px;
+
+        position: relative;
+        margin-top: 10vh;
+        left: 0vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .team_text {
+        color: white;
+        font-size: 5vh;
+        height: 20vh;
+        font-family: 'formulaOneRegular';
+        padding-right: 5vw;
+        
+        position: relative;
+        top: 16vh;
+        right: -50vw;
+    }
+
+    .teams_positions {
+        height: 90vh;
+        width: 95vw;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: "tableFont";
+
+
+        border-collapse: collapse;
+        border-radius: 2vw;
+    }
+
+    /***************************************************
+    this is the footer css
+    ***************************************************/
+
+    footer {
+        background-color: red;
+        font-family: 'formulaOneRegular';
+        font-size: 1vw;
+        width: 100vw;
+        height: 10vh;
+        color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 20vh;
+    }
+}
+
+/*Phone View*/
+@media screen and (max-aspect-ratio: 3/4) { 
+    html {
+        background-color: red;
+    }
+
+    body {
+        background-blend-mode: linear-gradient(red, black);
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /***************************************************
+    this is the header css
+    ***************************************************/
+
+    header {
+        background: red;
+        height: 10vh;
+    }
+
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .nav_bar {
+        margin: 0 auto;
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .logo {
+        position: relative;
+        top: 5vh;
+        left: -6vw;
+        width: 15vh;
+        padding-left: 10vw;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    .logo:hover {
+        filter: invert(100%);
+    }
+
+    nav {
+        float: right;
+        padding-right: 5vw;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 2vw;
+        padding-top: 8vh;
+        padding-bottom: 3vh;
+
+        position: relative;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+
+        position: absolute;
+        top: 7vh;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        width: 100%;
+    }
+
+    /***************************************************
+    this is the drivers table css
+    ***************************************************/
+
+    .background_bubble {
+        width: 95vw;
+        height: 180vh;
+        background-color: white;
+        border-radius: 2vw;
+        box-shadow: 0px 0px 20px 5px;
+
+        position: relative;
+        margin-top: 10vh;
+        left: 5vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .driver_text {
+        color: white;
+        font-size: 5vh;
+        font-family: 'formulaOneRegular';
+        padding-left: 5vw;
+        
+        position: relative;
+        top: 4vh;
+    }
+
+    .drivers_positions {
+        height: 180vh;
+        width: 95vw;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: "tableFont";
+
+
+        border-collapse: collapse;
+        border-radius: 2vw;
+    }
+
+    th,
+    td {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+
+    tr:nth-child(even) {
+
+        background-color: rgba(255, 231, 231, 0.622);
+    }
+
+    /***************************************************
+    this is the drivers table css
+    ***************************************************/
+
+
+    .background_bubble2 {
+        width: 95vw;
+        height: 90vh;
+        background-color: white;
+        border-radius: 2vw;
+        box-shadow: 0px 0px 20px 5px;
+
+        position: relative;
+        margin-top: 10vh;
+        left: 0vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .team_text {
+        color: white;
+        font-size: 5vh;
+        height: 20vh;
+        font-family: 'formulaOneRegular';
+        padding-left: 5vw;
+        
+        position: relative;
+        top: 10vh;
+    }
+
+    .teams_positions {
+        height: 90vh;
+        width: 95vw;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: "tableFont";
+
+
+        border-collapse: collapse;
+        border-radius: 2vw;
+    }
+
+    /***************************************************
+    this is the footer css
+    ***************************************************/
+
+    footer {
+        background-color: red;
+        font-family: 'formulaOneRegular';
+        font-size: 1vw;
+        width: 100vw;
+        height: 10vh;
+        color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 20vh;
+    } 
+}
+
+/*Tablet View*/
+@media screen and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 16/10) {
+    html {
+        background-color: red;
+    }
+
+    body {
+        background-blend-mode: linear-gradient(red, black);
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /***************************************************
+this is the header css
+***************************************************/
+
+    header {
+        background: red;
+        height: 10vh;
+    }
+
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .nav_bar {
+        margin: 0 auto;
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .logo {
+        position: relative;
+        top: 3vh;
+        left: -6vw;
+        width: 15vh;
+        padding-left: 10vw;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    .logo:hover {
+        filter: invert(100%);
+    }
+
+    nav {
+        float: right;
+        padding-right: 5vw;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 2vw;
+        padding-top: 8vh;
+        padding-bottom: 3vh;
+
+        position: relative;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.25vh;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+
+        position: absolute;
+        top: 7vh;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        width: 100%;
+    }
+
+    /***************************************************
+    this is the drivers table css
+    ***************************************************/
+
+    .background_bubble {
+        width: 95vw;
+        height: 180vh;
+        background-color: white;
+        border-radius: 2vw;
+        box-shadow: 0px 0px 20px 5px;
+
+        position: relative;
+        margin-top: 10vh;
+        left: 5vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .driver_text {
+        color: white;
+        font-size: 5vh;
+        font-family: 'formulaOneRegular';
+        padding-left: 5vw;
+        
+        position: relative;
+        top: 4vh;
+    }
+
+    .drivers_positions {
+        height: 180vh;
+        width: 95vw;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: "tableFont";
+
+
+        border-collapse: collapse;
+        border-radius: 2vw;
+    }
+
+    th,
+    td {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+
+    tr:nth-child(even) {
+
+        background-color: rgba(255, 231, 231, 0.622);
+    }
+
+    /***************************************************
+    this is the drivers table css
+    ***************************************************/
+
+
+    .background_bubble2 {
+        width: 95vw;
+        height: 90vh;
+        background-color: white;
+        border-radius: 2vw;
+        box-shadow: 0px 0px 20px 5px;
+
+        position: relative;
+        margin-top: 10vh;
+        left: 0vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .team_text {
+        color: white;
+        font-size: 5vh;
+        height: 20vh;
+        font-family: 'formulaOneRegular';
+        padding-left: 5vw;
+
+        position: relative;
+        top: 15vh;
+    }
+
+    .teams_positions {
+        height: 90vh;
+        width: 95vw;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: "tableFont";
+
+
+        border-collapse: collapse;
+        border-radius: 2vw;
+    }
+
+    /***************************************************
+    this is the footer css
+    ***************************************************/
+
+    footer {
+        background-color: red;
+        font-family: 'formulaOneRegular';
+        font-size: 1vw;
+        width: 100vw;
+        height: 10vh;
+        color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 20vh;
+    }
+}

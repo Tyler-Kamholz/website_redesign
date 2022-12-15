@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/profile_edit.css" rel="stylesheet">
+    <title>Add Race</title>
+</head>
+
+<header>
+
+    <div class="nav_bar">
+
+        <a href="home"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li><a href="standings">Standings</a></li>
+                <li><a href="races">Next Race</a></li>
+                <li><a href="teams">Teams</a></li>
+                <li><a href="history">History</a></li>
+
+                <% if(session.loggedIn) { %>
+
+                    <li><a
+
+                        <%=  'href=user' %>
+                        >
+                        <%= "Profile" %>
+
+                    </a></li>
+                        
+                    <% } else { %>
+
+                        <li><a
+
+                            <%=  'href=login' %>
+                            >
+                            <%= "Login" %>
+
+                        </a></li>
+
+                    <% } %>
+
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<body>
+
+    <form method="POST" action="add_race">
+
+        <p>Race Number</p>
+        <input type="text" name="race_number" placeholder="Enter Race_number" required>
+        <p>Race Start Month</p>
+        <input type="text" name="race_month_start" placeholder="Enter Race Start Month" required>
+        <p>Race End Month</p>
+        <input type="text" name="race_month_end" placeholder="Enter Race End Month" required>
+        <p>Race Start Date</p>
+        <input type="text" name="race_date_start" placeholder="Enter Start Date" required>
+        <p>Race End Date</p>
+        <input type="text" name="race_date_end" placeholder="Enter End Date" required>
+        <p>Track Location</p>
+        <input type="text" name="track_location" placeholder="Enter Track Location" required>
+        <p>Race Name</p>
+        <input type="text" name="race_name" placeholder="Enter Race Name" required>
+        <p>Track Image</p>
+        
+        <input type="file" name="track_image">
+
+        <input type="submit" value="Add Race">
+
+    </form>
+    
+</body>
+</html>

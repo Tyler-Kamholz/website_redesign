@@ -1,0 +1,763 @@
+@font-face {
+    font-family: 'formulaOneRegular';
+    src: url(../fonts/Formula1-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneBold';
+    src: url(../fonts/Formula1-Bold.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneItalic';
+    src: url(../fonts/Formula1-Italic.woff2);
+}
+
+@font-face {
+    font-family: 'formulaOneWide';
+    src: url(../fonts/Formula1-Wide.woff2);
+}
+
+@font-face {
+    font-family: 'historyFont';
+    src: url(../fonts/Mukta-Regular.ttf);
+}
+
+/*Desktop View*/
+@media screen and (min-aspect-ratio: 16/10) and (max-aspect-ratio: 21/9) and (min-height: 375px) {
+    html {
+        background-color: red;
+    }
+
+    body {
+        background-blend-mode: linear-gradient(red, black);
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /***************************************************
+this is the header css
+***************************************************/
+
+    header {
+        background: red;
+        height: 10vh;
+    }
+
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .nav_bar {
+        margin: 0 auto;
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .logo {
+        position: relative;
+        top: 3vh;
+        left: -6vw;
+        width: 10vw;
+        padding-left: 10vw;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    .logo:hover {
+        filter: invert(100%);
+    }
+
+    nav {
+        float: right;
+        padding-right: 5vw;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 2vw;
+        padding-top: 8vh;
+        padding-bottom: 3vh;
+
+        position: relative;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: .8vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+
+        position: absolute;
+        top: 7vh;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        width: 100%;
+    }
+    /***************************************************
+this is the breaker css
+***************************************************/
+
+    .breaker {
+        position: relative;
+        top: 10vh;
+        height: 20vh;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, white 20%, rgba(255, 0, 0, 1) 90%);
+    }
+
+    /***************************************************
+this is the text css
+***************************************************/
+
+    .header {
+        font-family: 'formulaOneRegular';
+    }
+
+    .history {
+        background-color: white;
+        position: relative;
+        top: 10vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .para1 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .para2 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image1 {
+        float: left;
+        padding-right: 2vw;
+        width: 30vw;
+    }
+
+    .para3 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image2 {
+        width: 90vw;
+    }
+
+    .para4 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .para5 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .para6 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image3 {
+        width: 90vw;
+    }
+
+    .para7 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image4 {
+        float: right;
+    }
+
+    .para8 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image5 {
+        width: 90vw;
+    }
+
+    .source {
+        font-size: 1vh;
+    }
+
+    .end {
+        height: 20vh;
+        position: relative;
+        top: 10vh;
+
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, red 0%, white 60%);
+    }
+
+    /***************************************************
+this is the footer css
+***************************************************/
+
+    footer {
+        background-color: red;
+        font-family: 'formulaOneRegular';
+        font-size: 1vw;
+        width: 100vw;
+        height: 10vh;
+        color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 10vh;
+    }
+}
+
+/*Phone View*/
+@media screen and (max-aspect-ratio: 3/4) {
+    html {
+        background-color: red;
+    }
+
+    body {
+        background-blend-mode: linear-gradient(red, black);
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /***************************************************
+    this is the header css
+    ***************************************************/
+
+    header {
+        background: red;
+        height: 10vh;
+    }
+
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .nav_bar {
+        margin: 0 auto;
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .logo {
+        position: relative;
+        top: 5vh;
+        left: -6vw;
+        width: 15vh;
+        padding-left: 10vw;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    .logo:hover {
+        filter: invert(100%);
+    }
+
+    nav {
+        float: right;
+        padding-right: 5vw;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 2vw;
+        padding-top: 8vh;
+        padding-bottom: 3vh;
+
+        position: relative;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+
+        position: absolute;
+        top: 7vh;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        width: 100%;
+    }
+    /***************************************************
+this is the breaker css
+***************************************************/
+
+    .breaker {
+        position: relative;
+        top: 10vh;
+        height: 20vh;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, white 20%, rgba(255, 0, 0, 1) 90%);
+    }
+
+    /***************************************************
+this is the text css
+***************************************************/
+
+    .header {
+        font-family: 'formulaOneRegular';
+    }
+
+    .history {
+        background-color: white;
+        position: relative;
+        top: 10vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .para1 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .para2 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image1 {
+        float: left;
+        padding-right: 2vw;
+        width: 30vw;
+    }
+
+    .para3 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image2 {
+        width: 90vw;
+    }
+
+    .para4 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .para5 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .para6 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image3 {
+        width: 90vw;
+    }
+
+    .para7 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image4 {
+        float: right;
+    }
+
+    .para8 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image5 {
+        width: 90vw;
+    }
+
+    .source {
+        font-size: 1vh;
+    }
+
+    .end {
+        height: 20vh;
+        position: relative;
+        top: 10vh;
+
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, red 0%, white 60%);
+    }
+
+    /***************************************************
+this is the footer css
+***************************************************/
+
+    footer {
+        background-color: red;
+        font-family: 'formulaOneRegular';
+        font-size: 1vw;
+        width: 100vw;
+        height: 10vh;
+        color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 10vh;
+    }
+}
+
+/*Tablet View*/
+@media screen and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 21/9) and (min-height: 375px) {
+    html {
+        background-color: red;
+    }
+
+    body {
+        background-blend-mode: linear-gradient(red, black);
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /***************************************************
+this is the header css
+***************************************************/
+
+    header {
+        background: red;
+        height: 10vh;
+    }
+
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .nav_bar {
+        margin: 0 auto;
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .logo {
+        position: relative;
+        top: 3vh;
+        left: -6vw;
+        width: 15vh;
+        padding-left: 10vw;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    .logo:hover {
+        filter: invert(100%);
+    }
+
+    nav {
+        float: right;
+        padding-right: 5vw;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 2vw;
+        padding-top: 8vh;
+        padding-bottom: 3vh;
+
+        position: relative;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.25vh;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+
+        position: absolute;
+        top: 7vh;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        width: 100%;
+    }
+
+    /***************************************************
+this is the breaker css
+***************************************************/
+
+    .breaker {
+        position: relative;
+        top: 10vh;
+        height: 20vh;
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, white 20%, rgba(255, 0, 0, 1) 90%);
+    }
+
+    /***************************************************
+this is the text css
+***************************************************/
+
+    .header {
+        font-family: 'formulaOneRegular';
+    }
+
+    .history {
+        background-color: white;
+        position: relative;
+        top: 10vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .para1 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .para2 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image1 {
+        float: left;
+        padding-right: 2vw;
+        width: 30vw;
+    }
+
+    .para3 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image2 {
+        width: 90vw;
+    }
+
+    .para4 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .para5 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .para6 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image3 {
+        width: 90vw;
+    }
+
+    .para7 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image4 {
+        float: right;
+    }
+
+    .para8 {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
+
+        width: 90vw;
+    }
+
+    .image5 {
+        width: 90vw;
+    }
+
+    .source {
+        font-size: 1vh;
+    }
+
+    .end {
+        height: 20vh;
+        position: relative;
+        top: 10vh;
+
+        background: rgb(253, 255, 230);
+        background: linear-gradient(0deg, red 0%, white 60%);
+    }
+
+    /***************************************************
+this is the footer css
+***************************************************/
+
+    footer {
+        background-color: red;
+        font-family: 'formulaOneRegular';
+        font-size: 1vw;
+        width: 100vw;
+        height: 10vh;
+        color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 10vh;
+    }
+}

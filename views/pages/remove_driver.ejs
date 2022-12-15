@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style sheets/profile_edit.css" rel="stylesheet">
+    <title>Remove Driver</title>
+
+</head>
+
+<header>
+
+    <div class="nav_bar">
+
+        <a href="home"><img src="../assets/formula1.PNG" alt="logo" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li><a href="standings">Standings</a></li>
+                <li><a href="races">Next Race</a></li>
+                <li><a href="teams">Teams</a></li>
+                <li><a href="history">History</a></li>
+
+                <% if(session.loggedIn) { %>
+
+                    <li><a
+
+                        <%=  'href=user' %>
+                        >
+                        <%= "Profile" %>
+
+                    </a></li>
+                        
+                    <% } else { %>
+
+                        <li><a
+
+                            <%=  'href=login' %>
+                            >
+                            <%= "Login" %>
+
+                        </a></li>
+
+                    <% } %>
+
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<body>
+    
+    <form method="POST" action="remove_driver">
+
+        <p>Driver</p>
+        
+        <select name="first_name">
+
+            <% for(var i = 0; i < driver.length; i++) { %>
+
+                <option value="<%= driver[i].first_name %>"><%= driver[i].first_name %> <%= driver[i].last_name %></option>
+                
+            <% } %>
+
+        </select>
+    
+        <input type="submit" value="Remove Driver">
+    
+    </form>
+
+</body>
+
+</html>

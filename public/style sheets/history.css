@@ -119,6 +119,7 @@ this is the header css
     nav a:hover::before {
         width: 100%;
     }
+
     /***************************************************
 this is the breaker css
 ***************************************************/
@@ -307,8 +308,10 @@ this is the footer css
         position: relative;
         top: 5vh;
         left: -6vw;
-        width: 15vh;
+        width: 14vw;
         padding-left: 10vw;
+        padding-right: 0;
+        margin-right: 0;
 
         transition: all ease-in-out 250ms;
     }
@@ -330,8 +333,8 @@ this is the footer css
 
     nav li {
         display: inline-block;
-        margin-left: 2vw;
-        padding-top: 8vh;
+        margin-left: 1vw;
+        padding-top: 6vh;
         padding-bottom: 3vh;
 
         position: relative;
@@ -341,7 +344,7 @@ this is the footer css
         color: white;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 1.5vw;
+        font-size: 1.2vh;
         font-family: 'formulaOneRegular';
         transition: all ease-in-out 250ms;
     }
@@ -357,7 +360,7 @@ this is the footer css
         background-color: black;
 
         position: absolute;
-        top: 7vh;
+        top: 5vh;
         width: 0%;
         transition: all ease-in-out 250ms;
     }
@@ -365,16 +368,17 @@ this is the footer css
     nav a:hover::before {
         width: 100%;
     }
+
     /***************************************************
 this is the breaker css
 ***************************************************/
 
     .breaker {
         position: relative;
-        top: 10vh;
-        height: 20vh;
+        height: 2vh;
         background: rgb(253, 255, 230);
         background: linear-gradient(0deg, white 20%, rgba(255, 0, 0, 1) 90%);
+
     }
 
     /***************************************************
@@ -388,7 +392,6 @@ this is the text css
     .history {
         background-color: white;
         position: relative;
-        top: 10vh;
 
         display: flex;
         justify-content: center;
@@ -489,7 +492,6 @@ this is the text css
     .end {
         height: 20vh;
         position: relative;
-        top: 10vh;
 
         background: rgb(253, 255, 230);
         background: linear-gradient(0deg, red 0%, white 60%);
@@ -511,7 +513,6 @@ this is the footer css
         align-items: center;
         justify-content: center;
         position: relative;
-        top: 10vh;
     }
 }
 

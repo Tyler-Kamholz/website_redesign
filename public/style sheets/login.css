@@ -23,191 +23,400 @@
     src: url(../fonts/Mukta-Regular.ttf);
 }
 
-html {
-    background-color: red;
-}
+/*Desktop View*/
+@media screen and (min-aspect-ratio: 16/10) and (max-aspect-ratio: 21/9) and (min-height: 375px) {
 
-body {
-    background-blend-mode: linear-gradient(red, black);
-    margin: 0;
-    overflow-x: hidden;
-    width: 100vw;
-}
+    html {
+        background-color: red;
+    }
 
-/***************************************************
+    body {
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /***************************************************
 this is the header css
 ***************************************************/
 
-header {
-    background: red;
-    height: 10vh;
-}
+    header {
+        background: red;
+        height: 10vh;
+    }
 
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
 
-.nav_bar {
-    margin: 0 auto;
-    width: 100vw;
-    height: 10vh;
-}
+    .nav_bar {
+        margin: 0 auto;
+        width: 100vw;
+        height: 10vh;
+    }
 
-.logo {
-    position: relative;
-    top: 3vh;
-    left: -6vw;
-    width: 10vw;
-    padding-left: 10vw;
+    .logo {
+        position: relative;
+        top: 3vh;
+        left: -6vw;
+        width: 10vw;
+        padding-left: 10vw;
 
-    transition: all ease-in-out 250ms;
-}
+        transition: all ease-in-out 250ms;
+    }
 
-.logo:hover {
-    filter: invert(100%);
-}
+    .logo:hover {
+        filter: invert(100%);
+    }
 
-nav {
-    float: right;
-    padding-right: 5vw;
-}
+    nav {
+        float: right;
+        padding-right: 5vw;
+    }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 
-nav li {
-    display: inline-block;
-    margin-left: 2vw;
-    padding-top: 8vh;
-    padding-bottom: 3vh;
+    nav li {
+        display: inline-block;
+        margin-left: 2vw;
+        padding-top: 8vh;
+        padding-bottom: 3vh;
 
-    position: relative;
-}
+        position: relative;
+    }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: .8vw;
-    font-family: 'formulaOneRegular';
-    transition: all ease-in-out 250ms;
-}
+    nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: .8vw;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
 
-nav a:hover {
-    color: black;
-}
+    nav a:hover {
+        color: black;
+    }
 
-nav a::before {
-    content: '';
-    display: block;
-    height: .3vh;
-    background-color: black;
+    nav a::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
 
-    position: absolute;
-    top: 7vh;
-    width: 0%;
-    transition: all ease-in-out 250ms;
-}
+        position: absolute;
+        top: 7vh;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
 
-nav a:hover::before {
-    width: 100%;
-}
+    nav a:hover::before {
+        width: 100%;
+    }
 
-/***************************************************
+    /***************************************************
 this is the login css
 ***************************************************/
 
-.logins {
-    
-    display: grid;
-    grid-template-columns: 15vw 10vw 30vw 20vw 20vw;
+    .logins {
 
-    padding-top: 20vh;
-    
-}
+        display: grid;
+        grid-template-columns: 15vw 10vw 30vw 20vw 20vw;
 
-.login_box p, .login_box h1 {
-    color: black;
-}
+        padding-top: 20vh;
 
-.login_box {
-    height: 60vh;
-    width: 30vw;
-    border-radius: 2vw;
+    }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    .login_box p,
+    .login_box h1 {
+        color: black;
+    }
 
-    box-shadow: 0px 31px 35px -26px #080c21;
-    background-color: rgb(255, 255, 255);
-}
+    .login_box {
+        height: 60vh;
+        width: 30vw;
+        border-radius: 2vw;
 
-.login_box h1 {
-    font-family: 'formulaOneBold';
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
 
-.login_box p {
-    font-family: 'formulaOneRegular';
-}
+        box-shadow: 0px 31px 35px -26px #080c21;
+        background-color: rgb(255, 255, 255);
+    }
 
-.login_info {
-    display: flex;
-    align-items: center;
-}
+    .login_box h1 {
+        font-family: 'formulaOneBold';
+    }
 
-.text {
-    padding-right: 1vw;
-}
+    .login_box p {
+        font-family: 'formulaOneRegular';
+    }
 
-.login_info input {
-    border: none;
-    outline: none;
-    border-bottom: black solid 1px;
-}
+    .login_info {
+        display: flex;
+        align-items: center;
+    }
 
-.button {
-    width: 20vw;
-    height: 5vh;
+    .text {
+        padding-right: 1vw;
+    }
 
-    border-radius: 2vw;
-    outline: none;
-    cursor: pointer;
-    border: none;
-    border: .5vh solid red;
-    background-color: white;
-    color: black;
+    .login_info input {
+        border: none;
+        outline: none;
+        border-bottom: black solid 1px;
+    }
 
-    font-family: 'formulaOneBold';
-    transition: .25s;
-}
+    .button {
+        width: 20vw;
+        height: 5vh;
 
-.button:hover {
-    transition: .25s;
-    background-color: red;
-}
+        border-radius: 2vw;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        border: .5vh solid red;
+        background-color: white;
+        color: black;
 
-/***************************************************
+        font-family: 'formulaOneBold';
+        transition: .25s;
+    }
+
+    .button:hover {
+        transition: .25s;
+        background-color: red;
+    }
+
+    /***************************************************
 this is the footer css
 ***************************************************/
 
-footer {
-    background-color: red;
-    font-family: 'formulaOneRegular';
-    font-size: 1vw;
-    width: 100vw;
-    height: 10vh;
-    color: white;
+    footer {
+        background-color: red;
+        font-family: 'formulaOneRegular';
+        font-size: 1vw;
+        width: 100vw;
+        height: 10vh;
+        color: white;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 10vh;
+    }
+
+}
+
+
+/*Phone View*/
+@media screen and (max-aspect-ratio: 3/4) {
+
+    html {
+        background-color: red;
+    }
+
+    body {
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /***************************************************
+this is the header css
+***************************************************/
+
+    header {
+        background: red;
+        height: 10vh;
+    }
+
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .nav_bar {
+        margin: 0 auto;
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .logo {
+        position: relative;
+        top: 5vh;
+        left: -6vw;
+        width: 14vw;
+        padding-left: 10vw;
+        padding-right: 0;
+        margin-right: 0;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    .logo:hover {
+        filter: invert(100%);
+    }
+
+    nav {
+        float: right;
+        padding-right: 5vw;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 1vw;
+        padding-top: 6vh;
+        padding-bottom: 3vh;
+
+        position: relative;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.2vh;
+        font-family: 'formulaOneRegular';
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: .3vh;
+        background-color: black;
+
+        position: absolute;
+        top: 5vh;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        width: 100%;
+    }
+
+
+    /***************************************************
+this is the login css
+***************************************************/
+
+    .logins {
+
+        display: grid;
+        grid-template-rows: 5vh 30vh 10vh 30vh 5vh;
+
+        position: relative;
+        left: 10vw;
+
+    }
+
+    .login_box p,
+    .login_box h1 {
+        color: black;
+        font-size: small;
+    }
+
+    .login_box {
+        height: 30vh;
+        width: 80vw;
+        border-radius: 2vw;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        box-shadow: 0px 31px 35px -26px #080c21;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .login_box h1 {
+        font-family: 'formulaOneBold';
+    }
+
+    .login_box p {
+        font-family: 'formulaOneRegular';
+        font-size: xx-small;
+    }
+
+    .login_info {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 20vw;
+    }
+
+    .text {
+        padding-right: 1vw;
+    }
+
+    .login_info input {
+        border: none;
+        outline: none;
+        border-bottom: black solid 1px;
+    }
+
+    .button {
+        width: 18vw;
+        height: 3vh;
+
+        border-radius: 2vw;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        border: .5vh solid red;
+        background-color: white;
+        color: black;
+
+        font-family: 'formulaOneBold';
+        transition: .25s;
+    }
+
+    .button:hover {
+        transition: .25s;
+        background-color: red;
+    }
+
+    /***************************************************
+this is the footer css
+***************************************************/
+
+    footer {
+        background-color: red;
+        font-family: 'formulaOneRegular';
+        font-size: 1vw;
+        width: 100vw;
+        height: 10vh;
+        color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 10vh;
+    }
+
 }

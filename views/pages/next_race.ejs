@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+
     <header>
 
         <div class="nav_bar">
@@ -28,25 +28,21 @@
                     <li><a href="history">History</a></li>
                     <% if(session.loggedIn) { %>
 
-                        <li><a
-
-                            <%=  'href=user' %>
-                            >
-                            <%= "Profile" %>
-
-                        </a></li>
-                            
-                        <% } else { %>
-
-                            <li><a
-
-                                <%=  'href=login' %>
+                        <li><a <%='href=user' %>
                                 >
-                                <%= "Login" %>
-    
+                                <%= "Profile" %>
+
                             </a></li>
 
-                        <% } %>
+                        <% } else { %>
+
+                            <li><a <%='href=login' %>
+                                    >
+                                    <%= "Login" %>
+
+                                </a></li>
+
+                            <% } %>
                 </ul>
             </nav>
 
@@ -57,28 +53,33 @@
 
     <div class="race_schedule">
 
-        <% for(var i = 0; i < data.length; i++) { %>
+        <% for(var i=0; i < data.length; i++) { %>
 
-            <div class="race">
-                <div class="race_dates">
-                    <div class="month"> 
-                        
-                    <% if(data[i].race_month_start != data[i].race_month_end) { %>
-    
-                        <%= data[i].race_month_start + " - " %>
-    
-                    <% } %>
-    
-                    <%= data[i].race_month_end %>
-    
+            <div class="padding">
+                <div class="race">
+                    <div class="race_dates">
+                        <div class="month">
+
+                            <% if(data[i].race_month_start !=data[i].race_month_end) { %>
+
+                                <%= data[i].race_month_start + " - " %>
+
+                                    <% } %>
+
+                                        <%= data[i].race_month_end %>
+
+                        </div>
+                        <div class="date">
+                            <%= data[i].race_date_start %>-<%= data[i].race_date_end %>
+                        </div>
                     </div>
-                    <div class="date"> <%= data[i].race_date_start %>-<%= data[i].race_date_end %> </div>
+                    <div class="location">
+                        <%= data[i].race_name %>
+                    </div>
                 </div>
-                <img class="race_image" src="../assets/next race/dummy image.jpeg">
-                <div class="location"> <%= data[i].race_name %> </div>
             </div>
 
-        <% } %>
+            <% } %>
 
 
     </div>

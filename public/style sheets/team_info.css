@@ -18,7 +18,7 @@
     src: url(../fonts/Formula1-Wide.woff2);
 }
 
-
+/*desktop view*/
 @media screen and (min-aspect-ratio: 16/10) and (max-aspect-ratio: 21/9) and (min-height: 375px) {
 
     html {
@@ -119,10 +119,6 @@ this is the header css
     /***************************************************
 this is the footer css
 ***************************************************/
-
-    .space {
-        height: 3vh;
-    }
 
     .teams {
         display: flex;
@@ -402,6 +398,7 @@ this is the footer css
     }
 }
 
+/*phone view*/
 @media screen and (max-aspect-ratio: 3/4) {
 
     html {
@@ -476,7 +473,7 @@ this is the footer css
         color: white;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 1.2vh;
+        font-size: xx-small;
         font-family: 'formulaOneRegular';
         transition: all ease-in-out 250ms;
     }
@@ -502,12 +499,10 @@ this is the footer css
     }
 
     /***************************************************
-this is the footer css
+this is the team css
 ***************************************************/
 
-    .space {
-        height: 3vh;
-    }
+    
 
     .teams {
         display: flex;
@@ -542,7 +537,7 @@ this is the footer css
     .dots2 {
         border-bottom-right-radius: 2vw;
         border-bottom-left-radius: 2vw;
-        height: 209vh;
+        height: 158vh;
         width: 80vw;
         object-fit: cover;
 
@@ -563,7 +558,7 @@ this is the footer css
         position: absolute;
         top: 18vh;
         width: 80vw;
-        height: 20vh;
+        height: 15vh;
 
         border-radius: 2vw;
         border: 2px solid black;
@@ -573,58 +568,58 @@ this is the footer css
 
     #one {
         position: absolute;
-        top: 15vh;
+        top: 12vh;
     }
 
     #two {
         position: absolute;
-        top: 36vh;
+        top: 28vh;
     }
 
     #three {
         position: absolute;
-        top: 57vh;
+        top: 44vh;
     }
 
     #four {
         position: absolute;
-        top: 78vh;
+        top: 60vh;
     }
 
     #five {
         position: absolute;
-        top: 99vh;
+        top: 76vh;
     }
 
     #six {
         position: absolute;
-        top: 120vh;
+        top: 92vh;
     }
 
     #seven {
         position: absolute;
-        top: 141vh;
+        top: 108vh;
     }
 
     #eight {
         position: absolute;
-        top: 162vh;
+        top: 124vh;
     }
 
     #nine {
         position: absolute;
-        top: 183vh;
+        top: 140vh;
     }
 
     #ten {
         position: absolute;
-        top: 204vh;
+        top: 156vh;
     }
 
 
     .not_driver_info {
         width: 40vw;
-        height: 20vh;
+        height: 15vh;
 
         display: flex;
         flex-direction: column;
@@ -632,7 +627,7 @@ this is the footer css
 
     .drivers {
         width: 40vw;
-        height: 20vh;
+        height: 15vh;
         display: flex;
         justify-content: space-around;
     }
@@ -650,7 +645,7 @@ this is the footer css
         padding-bottom: 1vh;
 
         font-family: 'formulaOneBold';
-        font-size: 3vw;
+        font-size: small;
         color: red;
     }
 
@@ -668,7 +663,7 @@ this is the footer css
         align-items: flex-end;
 
         font-family: 'formulaOneWide';
-        font-size: 1vw;
+        font-size: 1.75vw;
     }
 
     .team {
@@ -689,12 +684,13 @@ this is the footer css
     }
 
     .name {
-        height: 6vh;
-        padding-top: 2vh;
+        height: 1vh;
+        padding-top: 1vh;
+        padding-bottom: 2vh;
         text-align: center;
 
         font-family: 'formulaOneRegular';
-        font-size: 1.3vw;
+        font-size: 2vw;
     }
 
     .driver_image {
@@ -711,7 +707,7 @@ this is the footer css
 
         padding-left: .5vw;
 
-        font-size: 1.5vw;
+        font-size: x-small;
         font-family: 'formulaOneBold';
         text-transform: uppercase;
     }
@@ -790,6 +786,7 @@ this is the footer css
     }
 }
 
+/*tablet view*/
 @media screen and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 16/10) {
 
     html {
@@ -890,10 +887,6 @@ this is the header css
     /***************************************************
 this is the footer css
 ***************************************************/
-
-    .space {
-        height: 3vh;
-    }
 
     .teams {
         display: flex;

@@ -785,7 +785,7 @@ body {
         color: white;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 1.2vh;
+        font-size: xx-small;
         font-family: 'formulaOneRegular';
         transition: all ease-in-out 250ms;
     }
@@ -965,6 +965,7 @@ body {
         display: flex;
         justify-content: center;
         width: 100vw;
+        padding-top: 8vh;
     }
     
     .poll_info {
